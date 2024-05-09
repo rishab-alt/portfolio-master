@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
-const ProjectPage = () => {
+const DownloadPage = () => {
   const [darkMode, setDarkMode] = useState(false);
   const [showMenu, setShowMenu] = useState(false);
 
@@ -65,22 +65,31 @@ const ProjectPage = () => {
         </div>
       </nav>
 
-     {/* Content */}
-     <div className="container mx-auto py-8">
-        {/* Centered Card */}
-        <div className={`max-w-md mx-auto bg-white dark:bg-gray-700 rounded-lg overflow-hidden shadow-lg ${darkMode ? 'dark:text-white' : ''}`}>
-          <img className="w-full" src="https://www.svgrepo.com/show/503798/world.svg" alt="Landscape" />
-          <div className="px-6 py-4">
-            <div className="font-bold text-xl mb-2">Online world</div>
-            <p className={`text-base ${darkMode ? 'text-gray-300' : 'text-gray-700'}`}>
-              This is an exam unit
-            </p>
+      {/* Content */}
+      <div className="container mx-auto py-8 flex flex-col md:flex-row">
+        {/* Image Section */}
+        <div className="w-full md:w-1/2 p-4">
+          <img className="w-full object-cover" src="https://via.placeholder.com/800x600" alt="Placeholder" />
+        </div>
+        {/* Downloads Section */}
+        <div className="w-full md:w-1/2 p-4 overflow-y-auto">
+          {/* Assignment Cards */}
+          <div className="max-w-lg mx-auto bg-white dark:bg-gray-700 rounded-lg overflow-hidden shadow-lg mb-4">
+            <div className="px-6 py-4">
+              <div className="font-bold text-xl mb-2">Assignment 1</div>
+              <p className={`text-base ${darkMode ? 'text-gray-300' : 'text-gray-700'}`}>
+                Click the link below to download.
+              </p>
+              <div className="mt-4">
+                <a href="#" className={`block text-base py-2 px-4 bg-yellow-500 text-black rounded-md shadow-md hover:bg-yellow-400 focus:outline-none ${darkMode ? 'dark:bg-gray-800 dark:text-white' : ''}`}>Download Link 1</a>
+              </div>
+            </div>
           </div>
+          {/* Add more cards here */}
         </div>
       </div>
     </div>
-
   );
 }
 
-export default ProjectPage;
+export default DownloadPage;
