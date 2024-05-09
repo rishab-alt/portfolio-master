@@ -27,13 +27,13 @@ const HomePage = () => {
               <a href="/" className="hover:text-yellow-300">Home</a>
             </li>
             <li className="mr-4">
-              <a href="#about" className="hover:text-yellow-300">About</a>
+              <a href="/about" className="hover:text-yellow-300">About</a>
             </li>
             <li className="mr-4">
               <a href="/projects" className="hover:text-yellow-300">Projects</a>
             </li>
             <li>
-              <a href="#contact" className="hover:text-yellow-300">Contact</a>
+              <a href="/contact" className="hover:text-yellow-300">Contact</a>
             </li>
           </ul>
         </div>
@@ -44,16 +44,16 @@ const HomePage = () => {
         <div className="md:hidden bg-black text-white py-4 absolute top-16 left-0 right-0 z-10">
           <ul className="text-center">
             <li className="mb-4">
-              <a href="#home" className="block py-2 px-4 hover:bg-yellow-500">Home</a>
+              <a href="/" className="block py-2 px-4 hover:bg-yellow-500">Home</a>
             </li>
             <li className="mb-4">
-              <a href="#about" className="block py-2 px-4 hover:bg-yellow-500">About</a>
+              <a href="/about" className="block py-2 px-4 hover:bg-yellow-500">About</a>
             </li>
             <li className="mb-4">
-              <a href="#projects" className="block py-2 px-4 hover:bg-yellow-500">Projects</a>
+              <a href="/projects" className="block py-2 px-4 hover:bg-yellow-500">Projects</a>
             </li>
             <li>
-              <a href="#contact" className="block py-2 px-4 hover:bg-yellow-500">Contact</a>
+              <a href="/contact" className="block py-2 px-4 hover:bg-yellow-500">Contact</a>
             </li>
           </ul>
         </div>
