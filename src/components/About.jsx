@@ -1,8 +1,18 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
-const About = ({ darkMode, toggleDarkMode }) => {
+const About = () => {
+  const [darkMode, setDarkMode] = useState(false);
   const [showMenu, setShowMenu] = useState(false);
+
+  useEffect(() => {
+    const prefersDarkMode = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+    setDarkMode(prefersDarkMode);
+  }, []);
+
+  const toggleDarkMode = () => {
+    setDarkMode(!darkMode);
+  };
 
   const toggleMenu = () => {
     setShowMenu(!showMenu);
@@ -14,11 +24,11 @@ const About = ({ darkMode, toggleDarkMode }) => {
       <nav className={`bg-white shadow ${darkMode ? 'dark:bg-gray-900' : ''}`}>
         <div className="container mx-auto px-4 py-2 flex justify-between items-center">
           {/* Logo/Brand */}
-          <Link to="/" className="text-3xl font-bold">My Portfolio</Link>
+          <Link to="/" className="text-yellow-500 text-3xl font-bold">My Portfolio</Link>
           {/* Hamburger Menu */}
           <button
             onClick={toggleMenu}
-            className="block md:hidden text-gray-600 hover:text-gray-800 focus:outline-none"
+            className="block md:hidden text-white focus:outline-none"
           >
             <svg
               className="w-6 h-6"
@@ -45,9 +55,7 @@ const About = ({ darkMode, toggleDarkMode }) => {
             </div>
           </div>
           {/* Dark Mode Toggle Button */}
-          <button onClick={toggleDarkMode} className="px-3 py-1 bg-yellow-500 text-black rounded-md shadow-md hover:bg-yellow-400 focus:outline-none">
-            {darkMode ? "Light Mode" : "Dark Mode"}
-          </button>
+         
         </div>
         {/* Collapsible Menu */}
         <div className={`md:hidden ${showMenu ? 'block' : 'hidden'} text-center`}>
@@ -60,11 +68,13 @@ const About = ({ darkMode, toggleDarkMode }) => {
         </div>
       </nav>
 
-      {/* Content */}
-      <div className="container mx-auto p-4 flex justify-center items-center">
-        <div className="max-w-md p-8 bg-white dark:bg-gray-700 rounded-lg shadow-lg">
-          <h1 className={`text-4xl font-bold mb-4 ${darkMode ? 'text-white' : 'text-black'}`}>About Me</h1>
-          <p className={`text-lg ${darkMode ? 'text-gray-300' : 'text-gray-800'}`}>I'm passionate about coding and creating innovative solutions. With a background in web development, I strive to continuously learn and improve my skills. My goal is to contribute to meaningful projects and make a positive impact in the tech community.</p>
+     {/* Content */}
+     <div className="container mx-auto p-4 flex justify-center items-center">
+        <div className={`max-w-md p-8 bg-white dark:bg-gray-700 rounded-lg shadow-lg ${darkMode ? 'dark:text-white' : ''}`}>
+          <h1 className="text-4xl font-bold mb-4">About Me</h1>
+          <p className={`text-lg ${darkMode ? 'text-gray-300' : 'text-gray-800'}`}>
+            I'm passionate about coding and creating innovative solutions. With a background in web development, I strive to continuously learn and improve my skills. My goal is to contribute to meaningful projects and make a positive impact in the tech community.
+          </p>
         </div>
       </div>
     </div>

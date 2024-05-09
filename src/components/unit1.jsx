@@ -1,9 +1,14 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
 const ProjectPage = () => {
   const [darkMode, setDarkMode] = useState(false);
   const [showMenu, setShowMenu] = useState(false);
+
+  useEffect(() => {
+    const prefersDarkMode = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+    setDarkMode(prefersDarkMode);
+  }, []);
 
   const toggleDarkMode = () => {
     setDarkMode(!darkMode);
@@ -23,7 +28,7 @@ const ProjectPage = () => {
           {/* Hamburger Menu */}
           <button
             onClick={toggleMenu}
-            className="block md:hidden text-gray-600 hover:text-gray-800 focus:outline-none"
+            className="block md:hidden text-white focus:outline-none"
           >
             <svg
               className="w-6 h-6"
@@ -50,9 +55,7 @@ const ProjectPage = () => {
             </div>
           </div>
           {/* Dark Mode Toggle Button */}
-          <button onClick={toggleDarkMode} className="px-3 py-1 bg-yellow-500 text-black rounded-md shadow-md hover:bg-yellow-400 focus:outline-none">
-            {darkMode ? "Light Mode" : "Dark Mode"}
-          </button>
+          
         </div>
         {/* Collapsible Menu */}
         <div className={`md:hidden ${showMenu ? 'block' : 'hidden'} text-center`}>
@@ -65,8 +68,8 @@ const ProjectPage = () => {
         </div>
       </nav>
 
-     {/* Content */}
-     <div className="container mx-auto py-8">
+      {/* Content */}
+      <div className="container mx-auto py-8">
         {/* Centered Card */}
         <div className={`max-w-md mx-auto bg-white dark:bg-gray-700 rounded-lg overflow-hidden shadow-lg ${darkMode ? 'dark:text-white' : ''}`}>
           <img className="w-full" src="https://www.svgrepo.com/show/503798/world.svg" alt="Landscape" />
@@ -79,7 +82,6 @@ const ProjectPage = () => {
         </div>
       </div>
     </div>
-
   );
 }
 
