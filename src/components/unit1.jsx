@@ -16,12 +16,12 @@ const ProjectPage = () => {
   };
 
   return (
-    <div className={`min-h-screen ${darkMode ? 'dark' : ''} bg-gray-100 dark:bg-gray-800`}>
+    <div className={`min-h-screen ${darkMode ? 'dark' : ''} bg-gray-100 dark:bg-gray-800 text-black`}>
       {/* Navigation */}
       <nav className={`bg-white shadow ${darkMode ? 'dark:bg-gray-900' : ''}`}>
         <div className="container mx-auto px-4 py-2 flex justify-between items-center">
           {/* Logo/Brand */}
-          <Link to="/" className="text-xl font-bold text-gray-800 dark:text-white">Online World</Link>
+          <Link to="/" className=" text-yellow-500 text-3xl font-bold">My Portfolio</Link>
           {/* Hamburger Menu Button */}
           <button onClick={toggleMenu} className="md:hidden focus:outline-none">
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -31,17 +31,17 @@ const ProjectPage = () => {
           {/* Nav Links */}
           <div className={`md:flex ${showMenu ? 'block' : 'hidden'}`}> {/* Show/hide based on menu state */}
             <div className="flex space-x-4">
-              <Link to="/" className={`text-gray-600 hover:text-gray-800 ${darkMode ? 'dark:text-white dark:hover:text-gray-300' : ''}`}>Home</Link>
-              <Link to="/unit1" className={`text-gray-600 hover:text-gray-800 ${darkMode ? 'dark:text-white dark:hover:text-gray-300' : ''}`}>Unit 1</Link>
-              <Link to="/unit2" className={`text-gray-600 hover:text-gray-800 ${darkMode ? 'dark:text-white dark:hover:text-gray-300' : ''}`}>Unit 2</Link>
-              <Link to="/unit3" className={`text-gray-600 hover:text-gray-800 ${darkMode ? 'dark:text-white dark:hover:text-gray-300' : ''}`}>Unit 3</Link>
-              <Link to="/unit4" className={`text-gray-600 hover:text-gray-800 ${darkMode ? 'dark:text-white dark:hover:text-gray-300' : ''}`}>Unit 4</Link>
-              <Link to="/unit5" className={`text-gray-600 hover:text-gray-800 ${darkMode ? 'dark:text-white dark:hover:text-gray-300' : ''}`}>Unit 5</Link>
-              <Link to="/unit6" className={`text-gray-600 hover:text-gray-800 ${darkMode ? 'dark:text-white dark:hover:text-gray-300' : ''}`}>Unit 6</Link>
+              <Link to="/" className={`hover:text-yellow-300 ${darkMode ? 'text-gray-300' : 'text-black'}`}>Home</Link>
+              <Link to="/unit1" className={`hover:text-yellow-300 ${darkMode ? 'text-gray-300' : 'text-black'}`}>Unit 1</Link>
+              <Link to="/unit2" className={`hover:text-yellow-300 ${darkMode ? 'text-gray-300' : 'text-black'}`}>Unit 2</Link>
+              <Link to="/unit3" className={`hover:text-yellow-300 ${darkMode ? 'text-gray-300' : 'text-black'}`}>Unit 3</Link>
+              <Link to="/unit4" className={`hover:text-yellow-300 ${darkMode ? 'text-gray-300' : 'text-black'}`}>Unit 4</Link>
+              <Link to="/unit5" className={`hover:text-yellow-300 ${darkMode ? 'text-gray-300' : 'text-black'}`}>Unit 5</Link>
+              <Link to="/unit6" className={`hover:text-yellow-300 ${darkMode ? 'text-gray-300' : 'text-black'}`}>Unit 6</Link>
             </div>
           </div>
           {/* Dark Mode Toggle Button */}
-          <button onClick={toggleDarkMode} className="px-3 py-1 bg-gray-800 text-white rounded-md shadow-md hover:bg-gray-700 focus:outline-none">
+          <button onClick={toggleDarkMode} className="px-3 py-1 bg-yellow-500 text-black rounded-md shadow-md hover:bg-yellow-400 focus:outline-none">
             {darkMode ? "Light Mode" : "Dark Mode"}
           </button>
         </div>

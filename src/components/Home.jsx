@@ -24,16 +24,16 @@ const HomePage = () => {
           {/* Desktop Navigation Menu */}
           <ul className="hidden md:flex">
             <li className="mr-4">
-              <a href="/" className="hover:text-yellow-300">Home</a>
+              <a href="/" className="hover:text-yellow-300 font-semibold text-xl">Home</a>
             </li>
             <li className="mr-4">
-              <a href="/about" className="hover:text-yellow-300">About</a>
+              <a href="/about" className="hover:text-yellow-300 font-semibold text-xl">About</a>
             </li>
             <li className="mr-4">
-              <a href="/projects" className="hover:text-yellow-300">Projects</a>
+              <a href="/projects" className="hover:text-yellow-300 font-semibold text-xl">Projects</a>
             </li>
             <li>
-              <a href="/contact" className="hover:text-yellow-300">Contact</a>
+              <a href="/contact" className="hover:text-yellow-300 font-semibold text-xl">Contact</a>
             </li>
           </ul>
         </div>
