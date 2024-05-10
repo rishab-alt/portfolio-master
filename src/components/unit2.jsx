@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
-const ProjectPage = () => {
+
+const ProjectPage_Unit2 = () => {
   const [darkMode, setDarkMode] = useState(false);
   const [showMenu, setShowMenu] = useState(false);
 
@@ -72,9 +73,9 @@ const ProjectPage = () => {
         <div className="max-w-md mx-auto bg-white dark:bg-gray-700 rounded-lg overflow-hidden shadow-lg md:w-3/4">
           <img className="w-full" src="https://www.svgrepo.com/show/503798/world.svg" alt="Landscape" />
           <div className="px-6 py-4">
-            <div className="font-bold text-xl mb-2">Online World</div>
+            <div className="font-bold text-xl mb-2">Technology Systems </div>
             <p className={`text-base ${darkMode ? 'text-gray-300' : 'text-gray-700'}`}>
-              This is an exam unit in the online world. It involves learning about various aspects of the internet, including web development, cybersecurity, and digital marketing.
+                Hardware
             </p>
           </div>
         </div>
@@ -83,4 +84,4 @@ const ProjectPage = () => {
   );
 }
 
-export default ProjectPage;
+export default ProjectPage_Unit2;

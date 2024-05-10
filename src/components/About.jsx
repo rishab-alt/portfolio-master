@@ -54,8 +54,6 @@ const About = () => {
               <Link to="/contact" className={`block mt-4 md:inline-block md:mt-0 hover:text-yellow-300 ${darkMode ? 'text-gray-300' : 'text-black'}`}>Contact</Link>
             </div>
           </div>
-          {/* Dark Mode Toggle Button */}
-         
         </div>
         {/* Collapsible Menu */}
         <div className={`md:hidden ${showMenu ? 'block' : 'hidden'} text-center`}>
@@ -68,9 +66,9 @@ const About = () => {
         </div>
       </nav>
 
-     {/* Content */}
-     <div className="container mx-auto p-4 flex justify-center items-center">
-        <div className={`max-w-md p-8 bg-white dark:bg-gray-700 rounded-lg shadow-lg ${darkMode ? 'dark:text-white' : ''}`}>
+      {/* Content */}
+      <div className="container mx-auto p-4 flex justify-center items-center">
+        <div className={`max-w-md p-8 bg-white dark:bg-gray-700 rounded-lg shadow-lg ${darkMode ? 'dark:text-white' : ''} animate-fade-in`}>
           <h1 className="text-4xl font-bold mb-4">About Me</h1>
           <p className={`text-lg ${darkMode ? 'text-gray-300' : 'text-gray-800'}`}>
             I'm passionate about coding and creating innovative solutions. With a background in web development, I strive to continuously learn and improve my skills. My goal is to contribute to meaningful projects and make a positive impact in the tech community.

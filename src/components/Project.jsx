@@ -66,37 +66,39 @@ const ProjectPage = () => {
         </div>
       </nav>
       {/* Content */}
-      <div className="container mx-auto py-8">
+      <div className="container mx-auto py-8 px-4">
+        {/* Button for toggling light/dark mode */}
+      
         {/* Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mt-8">
           {/* Card 1 */}
           <Link to="/unit1">
             <div className={`rounded-lg overflow-hidden ${darkMode ? 'bg-gray-800' : 'bg-white'} transition duration-300 cursor-pointer border ${darkMode ? 'border-gray-700' : 'border-gray-200'} shadow-md hover:bg-gray-700 hover:text-white`}>
-              <div className="p-6">
-                <h3 className="text-lg font-semibold mb-4">Unit 1 - Online World</h3>
-                <p className={`text-yellow-500 ${darkMode ? 'text-gray-400' : 'text-black'}`}>College Exam Unit </p>
+              <div className="p-4">
+                <h3 className={`text-lg font-semibold mb-2 ${darkMode ? 'text-white' : ''}`}>Unit 1 - Online World</h3>
+                <p className={`text-yellow-500 ${darkMode ? 'text-gray-400' : 'text-black'}`}>College Exam Unit</p>
               </div>
             </div>
           </Link>
           {/* Card 2 */}
-          <Link to="/unit9">
+          <Link to="/unit2">
             <div className={`rounded-lg overflow-hidden ${darkMode ? 'bg-gray-800' : 'bg-white'} transition duration-300 cursor-pointer border ${darkMode ? 'border-gray-700' : 'border-gray-200'} shadow-md hover:bg-gray-700 hover:text-white`}>
-              <div className="p-6">
-                <h3 className="text-lg font-semibold mb-4">Unit 9</h3>
-                <p className={`text-yellow-500 ${darkMode ? 'text-gray-400' : 'text-black'}`}>College Exam Unit </p>
+              <div className="p-4">
+                <h3 className={`text-lg font-semibold mb-2 ${darkMode ? 'text-white' : ''}`}>Unit 2 - Technology Systems</h3>
+                <p className={`text-yellow-500 ${darkMode ? 'text-gray-400' : 'text-black'}`}>College Exam Unit</p>
               </div>
             </div>
           </Link>
           {/* Card 3 */}
-          <Link to="/unit3">
+          <Link to="/unit9">
             <div className={`rounded-lg overflow-hidden ${darkMode ? 'bg-gray-800' : 'bg-white'} transition duration-300 cursor-pointer border ${darkMode ? 'border-gray-700' : 'border-gray-200'} shadow-md hover:bg-gray-700 hover:text-white`}>
-              <div className="p-6">
-                <h3 className="text-lg font-semibold mb-4">Unit 3 - Digital Portfolio</h3>
-                <p className={`text-yellow-500 ${darkMode ? 'text-gray-400' : 'text-black'}`}>College Assignment Unit </p>
+              <div className="p-4">
+                <h3 className={`text-lg font-semibold mb-2 ${darkMode ? 'text-white' : ''}`}>Unit 9 - Spreadsheets</h3>
+                <p className={`text-yellow-500 ${darkMode ? 'text-gray-400' : 'text-black'}`}>College Assignment Unit</p>
               </div>
             </div>
           </Link>
-          {/* Add more cards here */}
+          {/* Card 4 and more similar cards */}
         </div>
       </div>
     </div>
