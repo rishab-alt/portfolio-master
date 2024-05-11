@@ -1,7 +1,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-
+import pdfUrl1 from '../Downloads/Unit 9 Assignment 1_Rish.pdf'
 
 const DownloadPage = () => {
   const [darkMode, setDarkMode] = useState(false);
@@ -86,7 +86,7 @@ const DownloadPage = () => {
                 Click the link below to download.
               </p>
               <div className="mt-4">
-                <a href='.\src\Downloads\Assignment1_unit1.pdf' className={`block text-base py-2 px-4 bg-yellow-500 text-black rounded-md shadow-md hover:bg-yellow-400 focus:outline-none ${darkMode ? 'dark:bg-gray-800 dark:text-white' : ''}`}>Download Link 1</a>
+                <a href={pdfUrl1} className={`block text-base py-2 px-4 bg-yellow-500 text-black rounded-md shadow-md hover:bg-yellow-400 focus:outline-none ${darkMode ? 'dark:bg-gray-800 dark:text-white' : ''}`}>Download Link 1</a>
               </div>
             </div>
           </div>
