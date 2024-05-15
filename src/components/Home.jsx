@@ -1,8 +1,21 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 
 const HomePage = () => {
   const [isOpen, setIsOpen] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      // Close the mobile menu when the window is resized
+      setIsOpen(false);
+    };
+
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
@@ -23,7 +36,7 @@ const HomePage = () => {
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
           >
-            My Portfolio
+            Rishab
           </motion.div>
           {/* Hamburger Menu Icon */}
           <div className="md:hidden">
@@ -34,7 +47,7 @@ const HomePage = () => {
             </button>
           </div>
           {/* Desktop Navigation Menu */}
-          <ul className="hidden md:flex">
+          <ul className={`hidden md:flex ${isOpen ? '' : 'hidden'}`}>
             <motion.li
               className="mr-4"
               whileHover={{ scale: 1.1 }}
@@ -73,7 +86,7 @@ const HomePage = () => {
         animate={{ opacity: isOpen ? 1 : 0, height: isOpen ? 'auto' : 0 }}
         transition={{ duration: 0.3 }}
       >
-        <ul className="text-center">
+        <ul className={`text-center ${isOpen ? '' : 'hidden'}`}>
           <motion.li
             className="mb-4"
             whileHover={{ scale: 1.1 }}
