@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import homeVideo from '../video/Home.mp4';
 
 const HomePage = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -23,18 +22,7 @@ const HomePage = () => {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen relative">
-      {/* Video Background */}
-      <video
-        autoPlay
-        loop
-        muted
-        className="absolute inset-0 w-full h-full object-cover z-0"
-      >
-        <source src={homeVideo} type="video/mp4" />
-        {/* Add fallback content here */}
-      </video>
-
+    <div className="bg-black text-white min-h-screen flex flex-col justify-center items-center">
       {/* Navigation Bar */}
       <motion.nav
         className="navbar bg-black text-yellow-500 p-4 absolute top-0 left-0 right-0 z-10"
@@ -93,7 +81,7 @@ const HomePage = () => {
 
       {/* Mobile Navigation Menu */}
       <motion.div
-        className="md:hidden bg-black text-white py-4 absolute top-16 left-0 right-0 z-20"
+        className="md:hidden bg-black text-white py-4 absolute top-16 left-0 right-0 z-10"
         initial={{ opacity: 0, height: 0 }}
         animate={{ opacity: isOpen ? 1 : 0, height: isOpen ? 'auto' : 0 }}
         transition={{ duration: 0.3 }}
@@ -132,14 +120,14 @@ const HomePage = () => {
       {/* Hero Section */}
       <motion.section
         id="home"
-        className="hero flex flex-col justify-center items-center text-center relative z-10"
+        className="hero flex flex-col justify-center items-center text-center"
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, delay: 0.5 }}
       >
-        <div className="container mx-auto flex flex-col justify-center items-center h-full">
+        <div className="container mx-auto">
           <motion.h1
-            className="text-5xl font-bold mb-4 text-white"
+            className="text-5xl font-bold mb-4"
             initial={{ opacity: 0, y: -50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.5 }}
@@ -147,7 +135,7 @@ const HomePage = () => {
             Welcome to My Portfolio
           </motion.h1>
           <motion.p
-            className="text-2xl mb-8 text-white"
+            className="text-2xl mb-8"
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.5 }}
