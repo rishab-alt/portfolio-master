@@ -104,19 +104,20 @@ return (
     </ul>
   </motion.div>
 
-      <div className="min-h-screen flex flex-col justify-center items-center">
-
-<div className="max-w-md mx-auto bg-gray-800 rounded-lg overflow-hidden shadow-lg">
-  <img className="w-full mb-0" src="https://www.svgrepo.com/show/503798/world.svg" alt="Landscape" />
-  <div className="px-6 py-4">
-    <div className="font-bold text-xl mb-2">Online World</div>
-    <p className="text-base text-gray-300">
-      This is an exam unit in the online world. It involves learning about various aspects of the internet, including web development, cybersecurity, and digital marketing.
-    </p>
+  <div class="min-h-screen flex flex-col justify-center items-center">
+  <div class="max-w-md mx-auto bg-gray-800 rounded-lg overflow-hidden shadow-lg">
+    <img class="w-full" src="https://www.svgrepo.com/show/503798/world.svg" alt="Landscape" />
+    <div class="px-6 py-4">
+      <div class="font-bold text-xl text-white mb-2">Online World</div>
+      <p class="text-base text-gray-300">
+        This is an exam unit in the online world. It involves learning about various aspects of the internet, including web development, cybersecurity, and digital marketing.
+      </p>
+    </div>
   </div>
 </div>
+
 </div>
-</div>
+
   
   );
 }
