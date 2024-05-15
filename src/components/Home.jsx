@@ -40,11 +40,15 @@ const HomePage = () => {
           </motion.div>
           {/* Hamburger Menu Icon */}
           <div className="md:hidden">
-            <button onClick={toggleMenu} className="text-white focus:outline-none">
+            <motion.button 
+              onClick={toggleMenu} 
+              className="text-white focus:outline-none"
+              whileHover={{ scale: 1.2 }}
+            >
               <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16m-7 6h7"></path>
               </svg>
-            </button>
+            </motion.button>
           </div>
           {/* Desktop Navigation Menu */}
           <ul className={`hidden md:flex ${isOpen ? '' : 'hidden'}`}>
@@ -130,7 +134,7 @@ const HomePage = () => {
             className="text-5xl font-bold mb-4"
             initial={{ opacity: 0, y: -50 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.5 }}
+            transition={{ duration: 0.5, delay: 0.5, ease: "easeOut" }}
           >
             Welcome to My Portfolio
           </motion.h1>
@@ -138,7 +142,7 @@ const HomePage = () => {
             className="text-2xl mb-8"
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.5 }}
+            transition={{ duration: 0.5, delay: 0.5, ease: "easeOut" }}
           >
             Showcasing my projects and skills
           </motion.p>
@@ -147,7 +151,7 @@ const HomePage = () => {
             className="cta-btn bg-yellow-500 text-black py-3 px-8 rounded-full font-semibold hover:bg-yellow-400 hover:text-white transition duration-300"
             initial={{ opacity: 0, scale: 0.5 }}
             animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.5, delay: 0.8 }}
+            transition={{ duration: 0.5, delay: 0.8, ease: "easeOut" }}
           >
             View Projects
           </motion.a>
