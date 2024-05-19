@@ -117,7 +117,7 @@ const DownloadPage = () => {
         <div className="w-full md:w-1/2 p-4">
           <div className={`max-w-lg mx-auto bg-${darkMode ? 'gray-800' : 'white'} rounded-lg overflow-hidden shadow-lg mb-4`}>
             <div className="p-4">
-              <img className="w-full object-cover" src="https://www.svgrepo.com/show/501852/computer.svg" alt="Placeholder" />
+              <img className="w-full object-cover" src="https://www.svgrepo.com/show/420902/computer-hardware-monitor-2.svg" alt="Placeholder" />
               <div className="mt-4">
                 <p className={`text-base ${darkMode ? 'text-gray-300' : 'text-gray-700'}`}>
                   This is a description of the image.

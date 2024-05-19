@@ -109,7 +109,7 @@ const ProjectPage = () => {
   <div className="min-h-screen flex flex-col justify-center items-center">
 
   <div className="max-w-md mx-auto bg-gray-800 rounded-lg overflow-hidden shadow-lg">
-    <img className="w-full mb-0" src="https://www.svgrepo.com/show/503798/world.svg" alt="Landscape" />
+    <img className="w-full mb-0" src="https://www.svgrepo.com/show/420911/computer-hardware-internet.svg" alt="Landscape" />
     <div className="px-6 py-4">
       <div className="font-bold text-xl mb-2">Online World</div>
       <p className="text-base text-gray-300">
