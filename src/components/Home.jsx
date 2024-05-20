@@ -136,7 +136,7 @@ const HomePage = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.5, ease: "easeOut" }}
           >
-            Welcome to My Portfoli0
+            Welcome to My Portfolio
           </motion.h1>
           <motion.p
             className="text-2xl mb-8"
