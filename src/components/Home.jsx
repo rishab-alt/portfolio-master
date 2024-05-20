@@ -160,32 +160,33 @@ const HomePage = () => {
                 initial={{ opacity: 0, y: 50 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.5, ease: "easeOut" }}
-              >
-                Showcasing my projects and skills
-              </motion.p>
-              <motion.a
-                href="/projects"
-                className="cta-btn bg-yellow-500 text-black py-3 px-8 rounded-full font-semibold hover:bg-yellow-400 hover:text-white transition duration-300"
-                initial={{ opacity: 0, scale:                0.5 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.5, delay: 0.8, ease: "easeOut" }}
-              >
-                View Projects
-              </motion.a>
-            </div>
-          </motion.section>
-        </>
-      )}
-      
-      {/* Custom Mouse */}
-      <motion.div 
-        className="custom-mouse" 
-        initial={{ opacity: 0, scale: 0 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 0.3 }}
-      />
-    </div>
-  );
-}
-
-export default HomePage;
+                              >
+                                Showcasing my projects and skills
+                              </motion.p>
+                              <motion.a
+                                href="/projects"
+                                className="cta-btn bg-yellow-500 text-black py-3 px-8 rounded-full font-semibold hover:bg-yellow-400 hover:text-white transition duration-300"
+                                initial={{ opacity: 0, scale: 0.5 }}
+                                animate={{ opacity: 1, scale: 1 }}
+                                transition={{ duration: 0.5, delay: 0.8, ease: "easeOut" }}
+                              >
+                                View Projects
+                              </motion.a>
+                            </div>
+                          </motion.section>
+                        </>
+                      )}
+                      
+                      {/* Custom Mouse */}
+                      <motion.div 
+                        className="custom-mouse" 
+                        initial={{ opacity: 0, scale: 0 }}
+                        animate={{ opacity: 1, scale: 1 }}
+                        transition={{ duration: 0.3 }}
+                      />
+                    </div>
+                  );
+                }
+                
+                export default HomePage;
+                
