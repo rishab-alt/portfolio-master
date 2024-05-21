@@ -109,9 +109,10 @@ const ProjectPage = () => {
         <div className="max-w-md mx-auto bg-gray-800 rounded-lg overflow-hidden shadow-lg">
           <img className="w-full mb-0" src="https://www.svgrepo.com/show/420911/computer-hardware-internet.svg" alt="Landscape" />
           <div className="px-6 py-4">
-            <div className="font-bold text-xl mb-2">Online World</div>
+            <div className="font-bold text-xl mb-2">Technology Systems</div>
             <p className="text-base text-gray-300">
-              This is an exam unit in the online world. It involves learning about various aspects of the internet, including web development, cybersecurity, and digital marketing.
+            This is an exam unit on technology systems , in this unit we learn how components if a technology systems work together aswell as understand different types of software. 
+              in addition to this, we learn how data flows between the internal component of a computer system and how it is processed to provide information spell check and ammend if it doesnt make sense
             </p>
           </div>
         </div>

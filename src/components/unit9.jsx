@@ -1,5 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import pdfUrl1 from '../Downloads/Unit 9 Assignment 1_Rish.pdf';
+import pdfUrl1 from './Downloads/Unit 9 Assignment 1_Rish.pdf';
+import pdfUrl2 from './Downloads/U9_Assignment_2 Rish.pdf';
+import pdfUrl3 from './Downloads/U9_Assignment_3_Rish.pdf'
+import pdfUrl4 from './Downloads/U9_Assignment_4 _Rish.pdf'
 import { motion } from 'framer-motion';
 
 const DownloadPage = () => {
@@ -149,7 +152,7 @@ const DownloadPage = () => {
                 Click the link below to download.
               </p>
               <div className="mt-4">
-                <a href="#" className="block text-base py-2 px-4 bg-yellow-500 text-black rounded-md shadow-md hover:bg-yellow-400 focus:outline-none">
+                <a href={pdfUrl2}className="block text-base py-2 px-4 bg-yellow-500 text-black rounded-md shadow-md hover:bg-yellow-400 focus:outline-none">
                   Download Link 2
                 </a>
               </div>
@@ -162,7 +165,7 @@ const DownloadPage = () => {
                 Click the link below to download.
               </p>
               <div className="mt-4">
-                <a href="#" className="block text-base py-2 px-4 bg-yellow-500 text-black rounded-md shadow-md hover:bg-yellow-400 focus:outline-none">
+                <a href={pdfUrl3} className="block text-base py-2 px-4 bg-yellow-500 text-black rounded-md shadow-md hover:bg-yellow-400 focus:outline-none">
                   Download Link 3
                 </a>
               </div>
@@ -175,7 +178,7 @@ const DownloadPage = () => {
                 Click the link below to download.
               </p>
               <div className="mt-4">
-                <a href="#" className="block text-base py-2 px-4 bg-yellow-500 text-black rounded-md shadow-md hover:bg-yellow-400 focus:outline-none">
+                <a href={pdfUrl4} className="block text-base py-2 px-4 bg-yellow-500 text-black rounded-md shadow-md hover:bg-yellow-400 focus:outline-none">
                   Download Link 4
                 </a>
               </div>

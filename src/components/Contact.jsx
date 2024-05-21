@@ -114,13 +114,13 @@ const Contact = () => {
             You can reach out to me via email at <a href="mailto:me@rishab.tech" className="text-yellow-500 underline">me@rishab.tech</a> or connect with me on social media:
           </p>
           <div className="flex justify-center mt-4">
-            <a href="#" className="text-2xl mr-4 hover:text-yellow-500">
+            <a href="https://github.com/rishab-alt" className="text-2xl mr-4 hover:text-yellow-500">
               <Github />
             </a>
-            <a href="#" className="text-2xl mr-4 hover:text-yellow-500">
+            <a href="https://www.linkedin.com/in/rishab-saddiq-9443291ab/" className="text-2xl mr-4 hover:text-yellow-500">
               <Linkedin />
             </a>
-            <a href="#" className="text-2xl mr-4 hover:text-yellow-500">
+            <a href="https://www.instagram.com/rish_saddiq/" className="text-2xl mr-4 hover:text-yellow-500">
               <Instagram />
             </a>
           </div>

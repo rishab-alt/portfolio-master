@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import pdfUrl1 from '../Downloads/Unit 9 Assignment 1_Rish.pdf';
+import pdfUrl1 from './Downloads/Unit 9 Assignment 1_Rish.pdf';
 import { motion } from 'framer-motion';
 
 const DownloadPage = () => {
