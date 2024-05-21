@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import Github from './images/Github'
-import linkedin from './images/Linkedin.svg'
-import instagram from './images/Instagram.svg'
+import Linkedin from './images/Linkedin'
+import Instagram from './images/Instagram'
 
 const Contact = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -118,10 +118,10 @@ const Contact = () => {
               <Github />
             </a>
             <a href="#" className="text-2xl mr-4 hover:text-yellow-500">
-              <github />
+              <Linkedin />
             </a>
             <a href="#" className="text-2xl mr-4 hover:text-yellow-500">
-              <github />
+              <Instagram />
             </a>
           </div>
         </div>
