@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 
 const HomePage = () => {
   const [isLoading, setIsLoading] = useState(true);
-  const [darkMode, setDarkMode] = useState(true);
+  const [darkMode] = useState(true);
 
   const [isOpen, setIsOpen] = useState(false);
 
