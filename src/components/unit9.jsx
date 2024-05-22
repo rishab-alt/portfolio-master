@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import pdfUrl1 from './Downloads/Unit 9 Assignment 1_Rish.pdf';
-import pdfUrl2 from './Downloads/U9_Assignment_2 Rish.pdf';
-import pdfUrl3 from './Downloads/U9_Assignment_3_Rish.pdf'
-import pdfUrl4 from './Downloads/U9_Assignment_4 _Rish.pdf'
+import pdfUrl1 from './Downloads/unit9/Unit 9 Assignment 1_Rish.pdf';
+import pdfUrl2 from './Downloads/unit9/U9_Assignment_2 Rish.pdf';
+import pdfUrl3 from './Downloads/unit9/U9_Assignment_3_Rish.pdf'
+import pdfUrl4 from './Downloads/unit9/U9_Assignment_4 _Rish.pdf'
+import Navbar from './NavBar'
 import { motion } from 'framer-motion';
 
 const DownloadPage = () => {
@@ -14,105 +15,12 @@ const DownloadPage = () => {
     setDarkMode(prefersDarkMode);
   }, []);
 
-  const toggleMenu = () => {
-    setIsOpen(!isOpen);
-  };
+
 
   return (
     <div className={`bg-${darkMode ? 'black' : 'white'} text-${darkMode ? 'white' : 'black'} min-h-screen flex flex-col justify-center items-center`}>
-      {/* Navigation Bar */}
-      <motion.nav
-        className={`navbar bg-${darkMode ? 'black' : 'white'} text-yellow-500 p-4 fixed top-0 left-0 right-0 z-10`}
-        initial={{ opacity: 0, y: -50 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5, delay: 0.5 }}
-      >
-        <div className="container mx-auto flex justify-between items-center">
-          <motion.div
-            className="text-3xl font-bold"
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.9 }}
-          >
-            My Portfolio
-          </motion.div>
-          {/* Hamburger Menu Icon */}
-          <div className="md:hidden">
-            <button onClick={toggleMenu} className="text-white focus:outline-none">
-              <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16m-7 6h7"></path>
-              </svg>
-            </button>
-          </div>
-          {/* Desktop Navigation Menu */}
-          <ul className="hidden md:flex">
-            <motion.li
-              className="mr-4"
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.9 }}
-            >
-              <a href="/" className="hover:text-yellow-300 font-semibold text-xl">Home</a>
-            </motion.li>
-            <motion.li
-              className="mr-4"
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.9 }}
-            >
-              <a href="/about" className="hover:text-yellow-300 font-semibold text-xl">About</a>
-            </motion.li>
-            <motion.li
-              className="mr-4"
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.9 }}
-            >
-              <a href="/projects" className="hover:text-yellow-300 font-semibold text-xl">Projects</a>
-            </motion.li>
-            <motion.li
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.9 }}
-            >
-              <a href="/contact" className="hover:text-yellow-300 font-semibold text-xl">Contact</a>
-            </motion.li>
-          </ul>
-        </div>
-      </motion.nav>
+      <Navbar darkMode={darkMode} />
 
-      {/* Mobile Navigation Menu */}
-      <motion.div
-        className={`md:hidden bg-${darkMode ? 'black' : 'white'} text-${darkMode ? 'white' : 'black'} py-4 absolute top-16 left-0 right-0 z-10`}
-        initial={{ opacity: 0, height: 0 }}
-        animate={{ opacity: isOpen ? 1 : 0, height: isOpen ? 'auto' : 0 }}
-        transition={{ duration: 0.3 }}
-      >
-        <ul className={`text-center ${isOpen ? '' : 'hidden'}`}>
-          <motion.li
-            className="mb-4"
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.9 }}
-          >
-            <a href="/" className="block py-2 px-4 hover:bg-yellow-500">Home</a>
-          </motion.li>
-          <motion.li
-            className="mb-4"
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.9 }}
-          >
-            <a href="/about" className="block py-2 px-4 hover:bg-yellow-500">About</a>
-          </motion.li>
-          <motion.li
-            className="mb-4"
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.9 }}
-          >
-            <a href="/projects" className="block py-2 px-4 hover:bg-yellow-500">Projects</a>
-          </motion.li>
-          <motion.li
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.9 }}
-          >
-            <a href="/contact" className="block py-2 px-4 hover:bg-yellow-500">Contact</a>
-          </motion.li>
-        </ul>
-      </motion.div>
 
       {/* Content */}
       <div className="container mx-auto py-[50px] flex flex-col md:flex-row">
@@ -123,8 +31,12 @@ const DownloadPage = () => {
               <img className="w-full object-cover" src="https://www.svgrepo.com/show/373589/excel.svg" alt="Placeholder" />
               <div className="mt-4">
                 <p className={`text-base ${darkMode ? 'text-gray-300' : 'text-gray-700'}`}>
-                  Spreadsheet Development 
-                </p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.              </p>
+              </div>
+              <div className="mt-4">
+                <a href={pdfUrl3} className="block text-base py-2 px-4 bg-yellow-500 text-black rounded-md shadow-md hover:bg-yellow-400 focus:outline-none">
+                  Download Final Spreadsheet Here!
+                </a>
               </div>
             </div>
           </div>
@@ -152,7 +64,7 @@ const DownloadPage = () => {
                 Click the link below to download.
               </p>
               <div className="mt-4">
-                <a href={pdfUrl2}className="block text-base py-2 px-4 bg-yellow-500 text-black rounded-md shadow-md hover:bg-yellow-400 focus:outline-none">
+                <a href={pdfUrl2} className="block text-base py-2 px-4 bg-yellow-500 text-black rounded-md shadow-md hover:bg-yellow-400 focus:outline-none">
                   Download Link 2
                 </a>
               </div>
