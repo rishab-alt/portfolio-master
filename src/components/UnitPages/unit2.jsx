@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import Navbar from './NavBar';
+import Navbar from '../NavBar';
 
 const ProjectPage = () => {
   const [darkMode, setDarkMode] = useState(true);

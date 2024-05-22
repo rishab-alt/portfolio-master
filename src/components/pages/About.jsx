@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import Navbar from './NavBar';
+import Navbar from '../NavBar';
 
 const AboutPage = () => {
   const [darkMode, setDarkMode] = useState(true);
@@ -14,7 +14,7 @@ const AboutPage = () => {
       <Navbar darkMode={darkMode} />
 
       {/* Content */}
-      <div className="flex-grow flex flex-col justify-center items-center py-8 px-4">
+      <div className="flex-grow flex flex-col justify-center items-center py-8 px-4 pt-16">
         <div className="max-w-md w-full bg-gray-800 rounded-lg shadow-lg text-center mb-8 p-6 md:p-8">
           <h1 className="text-3xl md:text-4xl font-bold mb-4">About Me</h1>
           <p className="text-lg md:text-xl">

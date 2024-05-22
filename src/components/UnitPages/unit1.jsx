@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import Navbar from './NavBar'
+import Navbar from '../NavBar'
 
 const ProjectPage = () => {
   const [isOpen, setIsOpen] = useState(false);

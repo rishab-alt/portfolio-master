@@ -1,13 +1,11 @@
 import React, { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
-import Github from './images/Github'
-import Linkedin from './images/Linkedin'
-import Instagram from './images/Instagram'
-import Navbar from './NavBar'
+import Github from '../images/Github'
+import Linkedin from '../images/Linkedin'
+import Instagram from '../images/Instagram'
+import Navbar from '../NavBar'
 
 const Contact = () => {
   const [darkMode, setDarkMode] = useState(true);
-  const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
     const prefersDarkMode = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
