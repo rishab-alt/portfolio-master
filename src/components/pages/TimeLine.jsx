@@ -17,20 +17,18 @@ const TimelinePage = () => {
   ];
 
   return (
-    <div className={`bg-${darkMode ? 'black' : 'white'} text-${darkMode ? 'white' : 'black'} min-h-screen flex flex-col`}>
+    <div className={`bg-${darkMode ? 'black' : 'white'} text-${darkMode ? 'white' : 'black'} min-h-screen flex flex-col items-center`}>
       <Navbar darkMode={darkMode} />
 
       {/* Content */}
-      <div className="flex-grow flex flex-col items-center py-8 px-4">
-        <h1 className="text-3xl md:text-4xl font-bold mt-8 mb-4 text-yellow-500">My Life!</h1>
-        <div className="flex flex-col space-y-8 w-full max-w-lg">
+      <div className="flex-grow flex flex-col items-center justify-center py-8 px-4">
+        <h1 className="text-3xl md:text-4xl font-bold mt-8 mb-4 text-yellow-500 text-center">My Life!</h1>
+        <div className="flex flex-col space-y-8 w-full max-w-lg items-center">
           {timelineEvents.map((event, index) => (
-            <div key={index} className={`flex items-start ${index % 2 === 0 ? 'flex-row-reverse' : 'flex-row'}`}>
-              <div className={`w-full flex justify-${index % 2 === 0 ? 'end' : 'start'}`}>
-                <div className={`bg-${darkMode ? 'gray-800' : 'gray-200'} text-${darkMode ? 'white' : 'black'} rounded-lg shadow-lg p-4 md:p-6 max-w-md w-full`} style={{ transitionDuration: '0.3s' }}>
-                  <p className="text-lg md:text-xl mb-2">{event.content}</p>
-                  <p className="text-sm text-gray-400 text-yellow-500">{event.date}</p>
-                </div>
+            <div key={index} className={`w-full flex justify-center`}>
+              <div className={`bg-${darkMode ? 'gray-800' : 'gray-200'} text-${darkMode ? 'white' : 'black'} rounded-lg shadow-lg p-4 md:p-6 max-w-md w-full`} style={{ transitionDuration: '0.3s' }}>
+                <p className="text-lg md:text-xl mb-2 text-center">{event.content}</p>
+                <p className="text-sm text-gray-400 text-yellow-500 text-center">{event.date}</p>
               </div>
             </div>
           ))}
