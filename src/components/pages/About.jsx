@@ -10,8 +10,8 @@ const AboutPage = () => {
   }, []);
 
   return (
-    <div className={`min-h-screen flex flex-col ${darkMode ? 'bg-black text-white' : 'bg-white text-black'} transition-colors duration-300`}>
-      <Navbar darkMode={darkMode} />
+    <div className="bg-black text-white min-h-screen flex flex-col justify-center items-center">
+      <Navbar  />
 
       {/* Content */}
       <div className="flex-grow flex flex-col justify-center items-center py-8 px-4 pt-16 transition-all duration-300 ease-in-out">

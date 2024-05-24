@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
+import Navbar from '../NavBar';
 import pdfUrl1 from '../Downloads/unit9/Unit 9 Assignment 1_Rish.pdf';
 import pdfUrl2 from '../Downloads/unit9/U9_Assignment_2 Rish.pdf';
-import pdfUrl3 from '../Downloads/unit9/U9_Assignment_3_Rish.pdf'
-import pdfUrl4 from '../Downloads/unit9/U9_Assignment_4 _Rish.pdf'
-import Navbar from '../NavBar'
+import pdfUrl3 from '../Downloads/unit9/U9_Assignment_3_Rish.pdf';
+import pdfUrl4 from '../Downloads/unit9/U9_Assignment_4 _Rish.pdf';
 
 const DownloadPage = () => {
   const [darkMode, setDarkMode] = useState(true);
@@ -13,23 +13,17 @@ const DownloadPage = () => {
     setDarkMode(prefersDarkMode);
   }, []);
 
-
-
   return (
-    <div className={`bg-${darkMode ? 'black' : 'white'} text-${darkMode ? 'white' : 'black'} min-h-screen flex flex-col justify-center items-center`}>
+    <div className="bg-black text-white min-h-screen flex flex-col justify-center items-center">
       <Navbar darkMode={darkMode} />
 
-
-      {/* Content */}
-      <div className="container mx-auto py-[50px] flex flex-col md:flex-row">
-        {/* Card Section */}
+      <div className="container mx-auto py-8 flex flex-col md:flex-row">
         <div className="w-full md:w-1/2 p-4">
-          <div className={`max-w-lg mx-auto bg-${darkMode ? 'gray-800' : 'white'} rounded-lg overflow-hidden shadow-lg mb-4`}>
+          <div className="max-w-lg mx-auto rounded-lg overflow-hidden shadow-lg mb-4 bg-gray-800">
             <div className="p-4">
               <img className="w-full object-cover" src="https://www.svgrepo.com/show/373589/excel.svg" alt="Placeholder" />
               <div className="mt-4">
-                <p className={`text-base ${darkMode ? 'text-gray-300' : 'text-gray-700'}`}>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.              </p>
+                <p className="text-base">{darkMode ? 'Dark mode content' : 'Light mode content'}</p>
               </div>
               <div className="mt-4">
                 <a href={pdfUrl3} className="block text-base py-2 px-4 bg-yellow-500 text-black rounded-md shadow-md hover:bg-yellow-400 focus:outline-none">
@@ -39,62 +33,20 @@ const DownloadPage = () => {
             </div>
           </div>
         </div>
-        {/* Downloads Section */}
         <div className="w-full md:w-1/2 p-4 overflow-y-auto">
-          {/* Assignment Cards */}
-          <div className={`max-w-lg mx-auto bg-${darkMode ? 'gray-800' : 'white'} rounded-lg overflow-hidden shadow-lg mb-4`}>
-            <div className="px-6 py-4">
-              <div className="font-bold text-xl mb-2">Assignment 1</div>
-              <p className={`text-base ${darkMode ? 'text-gray-300' : 'text-gray-700'}`}>
-                Click the link below to download.
-              </p>
-              <div className="mt-4">
-                <a href={pdfUrl1} className="block text-base py-2 px-4 bg-yellow-500 text-black rounded-md shadow-md hover:bg-yellow-400 focus:outline-none">
-                  Download Link 1
-                </a>
+          {[{ title: "Assignment 1", url: pdfUrl1 }, { title: "Assignment 2", url: pdfUrl2 }, { title: "Assignment 3", url: pdfUrl3 }, { title: "Assignment 4", url: pdfUrl4 }].map((assignment, index) => (
+            <div key={index} className="max-w-lg mx-auto bg-gray-800 rounded-lg overflow-hidden shadow-lg mb-4">
+              <div className="px-6 py-4">
+                <div className="font-bold text-xl mb-2">{assignment.title}</div>
+                <p className="text-base">Click the link below to download.</p>
+                <div className="mt-4">
+                  <a href={assignment.url} className="block text-base py-2 px-4 bg-yellow-500 text-black rounded-md shadow-md hover:bg-yellow-400 focus:outline-none">
+                    Download Link {index + 1}
+                  </a>
+                </div>
               </div>
             </div>
-          </div>
-          <div className={`max-w-lg mx-auto bg-${darkMode ? 'gray-800' : 'white'} rounded-lg overflow-hidden shadow-lg mb-4`}>
-            <div className="px-6 py-4">
-              <div className="font-bold text-xl mb-2">Assignment 2</div>
-              <p className={`text-base ${darkMode ? 'text-gray-300' : 'text-gray-700'}`}>
-                Click the link below to download.
-              </p>
-              <div className="mt-4">
-                <a href={pdfUrl2} className="block text-base py-2 px-4 bg-yellow-500 text-black rounded-md shadow-md hover:bg-yellow-400 focus:outline-none">
-                  Download Link 2
-                </a>
-              </div>
-            </div>
-          </div>
-          <div className={`max-w-lg mx-auto bg-${darkMode ? 'gray-800' : 'white'} rounded-lg overflow-hidden shadow-lg mb-4`}>
-            <div className="px-6 py-4">
-              <div className="font-bold text-xl mb-2">Assignment 3</div>
-              <p className={`text-base ${darkMode ? 'text-gray-300' : 'text-gray-700'}`}>
-                Click the link below to download.
-              </p>
-              <div className="mt-4">
-                <a href={pdfUrl3} className="block text-base py-2 px-4 bg-yellow-500 text-black rounded-md shadow-md hover:bg-yellow-400 focus:outline-none">
-                  Download Link 3
-                </a>
-              </div>
-            </div>
-          </div>
-          <div className={`max-w-lg mx-auto bg-${darkMode ? 'gray-800' : 'white'} rounded-lg overflow-hidden shadow-lg mb-4`}>
-            <div className="px-6 py-4">
-              <div className="font-bold text-xl mb-2">Assignment 4</div>
-              <p className={`text-base ${darkMode ? 'text-gray-300' : 'text-gray-700'}`}>
-                Click the link below to download.
-              </p>
-              <div className="mt-4">
-                <a href={pdfUrl4} className="block text-base py-2 px-4 bg-yellow-500 text-black rounded-md shadow-md hover:bg-yellow-400 focus:outline-none">
-                  Download Link 4
-                </a>
-              </div>
-            </div>
-          </div>
-          {/* Add more cards here */}
+          ))}
         </div>
       </div>
     </div>
