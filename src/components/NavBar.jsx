@@ -12,7 +12,7 @@ const Navbar = ({ darkMode }) => {
     <div>
       {/* Navigation Bar */}
       <motion.nav
-        className={'navbar bg text-yellow-500 p-4 fixed top-0 left-0 right-0 z-10'}
+        className={`navbar bg-${darkMode ? 'black' : 'white'} text-yellow-500 p-4 fixed top-0 left-0 right-0 z-10`}
         initial={{ opacity: 0, y: -50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, delay: 0.5 }}
@@ -34,7 +34,7 @@ const Navbar = ({ darkMode }) => {
             </button>
           </div>
           {/* Desktop Navigation Menu */}
-          <ul className="hidden md:flex">
+          <ul className={`md:flex ${isOpen ? 'hidden' : ''}`}>
             <motion.li
               className="mr-4"
               whileHover={{ scale: 1.1 }}
@@ -75,7 +75,7 @@ const Navbar = ({ darkMode }) => {
 
       {/* Mobile Navigation Menu */}
       <motion.div
-        className={`md:hidden bg-${darkMode ? 'black' : 'white'} text-${darkMode ? 'white' : 'black'} py-4 absolute top-16 left-0 right-0 z-10`}
+        className={`md:hidden bg-${darkMode ? 'black' : 'white'} text-${darkMode ? 'white' : 'black'} py-4 ${isOpen ? 'fixed top-16 left-0 right-0' : 'absolute top-16 left-0 right-0'}`}
         initial={{ opacity: 0, height: 0 }}
         animate={{ opacity: isOpen ? 1 : 0, height: isOpen ? 'auto' : 0 }}
         transition={{ duration: 0.3 }}
