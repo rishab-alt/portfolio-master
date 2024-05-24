@@ -18,8 +18,8 @@ const AboutPage = () => {
         <div className="max-w-md w-full bg-gray-800 rounded-lg shadow-lg text-center mb-8 p-6 md:p-8 transition-all duration-300 ease-in-out hover:shadow-xl">
           <h1 className="text-3xl md:text-4xl font-bold mb-4">About Me</h1>
           <p className="text-lg md:text-xl">
-            I'm passionate about coding and creating innovative solutions. With a background in web development, I strive to continuously learn and improve my skills. My goal is to contribute to meaningful projects and make a positive impact in the tech community.
-          </p>
+
+          Hello, I'm Rishab. I am a programmer and I mainly build projects using HTML, CSS, and PYTHON, as well as VISUAL BASIC. I like to contribute to GitHub projects and control planes on VATSIM.          </p>
         </div>
 
         {/* Education Section */}
