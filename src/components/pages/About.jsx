@@ -11,7 +11,7 @@ const AboutPage = () => {
 
   return (
     <div className="bg-black text-white min-h-screen flex flex-col justify-center items-center">
-      <Navbar  />
+      <Navbar darkMode={darkMode}  />
 
       {/* Content */}
       <div className="flex-grow flex flex-col justify-center items-center py-8 px-4 pt-16 transition-all duration-300 ease-in-out">
