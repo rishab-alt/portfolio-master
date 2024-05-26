@@ -18,7 +18,7 @@ const Contact = () => {
       <Navbar darkMode={darkMode} />
 
 
-      <div className="min-h-screen flex flex-col justify-center items-center">
+      <div className="min-h-screen flex flex-col justify-center items-center container mx-auto py-8 px-4 pt-20">
         <div className="max-w-md p-8 bg-gray-800 rounded-lg shadow-lg animate-fade-in text-center">
           <h1 className="text-4xl font-bold mb-4">Contact Me</h1>
           <p className="text-lg">
