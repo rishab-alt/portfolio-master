@@ -189,13 +189,7 @@ const HomePage = () => {
         </>
       )}
 
-      {/* Custom Mouse */}
-      <motion.div
-        className="custom-mouse"
-        initial={{ opacity: 0, scale: 0 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 0.3 }}
-      />
+
     </div>
   );
 }

@@ -14,7 +14,7 @@ const ProjectPage = () => {
 
 
   return (
-    <div className={`bg-${darkMode ? 'black' : 'white'} text-${darkMode ? 'white' : 'black'} min-h-screen flex flex-col`}>
+    <div className="bg-black text-white min-h-screen flex flex-col justify-center items-center">
       <Navbar darkMode={darkMode} />
 
       {/* Centered Card */}

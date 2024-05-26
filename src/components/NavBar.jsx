@@ -76,12 +76,12 @@ const Navbar = ({ darkMode }) => {
 
       {/* Mobile Navigation Menu */}
       <motion.div
-        className={`md:hidden bg-${darkMode ? 'black' : 'white'} text-${darkMode ? 'white' : 'black'} py-4 fixed top-16 left-0 right-0 z-10`}
+        className={`md:hidden bg-${darkMode ? 'black' : 'white'} text-${darkMode ? 'white' : 'black'} py-4 absolute top-16 left-0 right-0 z-10`}
         initial={{ opacity: 0, height: 0 }}
         animate={{ opacity: isOpen ? 1 : 0, height: isOpen ? 'auto' : 0 }}
         transition={{ duration: 0.3 }}
       >
-        <ul className={`text-center ${isOpen ? 'block' : 'hidden'}`}>
+        <ul className={`text-center ${isOpen ? '' : 'hidden'}`}>
           <motion.li
             className="mb-4"
             whileHover={{ scale: 1.1 }}
