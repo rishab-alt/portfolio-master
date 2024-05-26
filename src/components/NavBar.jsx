@@ -37,34 +37,35 @@ const Navbar = ({ darkMode }) => {
           {/* Desktop Navigation Menu */}
           <ul className="hidden md:flex">
             <motion.li
-              className="mr-4"
+              className="mr-6" // Increased spacing
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
             >
               <a href="/" className="hover:text-yellow-300 font-semibold text-xl">Home</a>
             </motion.li>
             <motion.li
-              className="mr-4"
+              className="mr-6" // Increased spacing
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
             >
               <a href="/about" className="hover:text-yellow-300 font-semibold text-xl">About</a>
             </motion.li>
             <motion.li
-              className="mr-4"
+              className="mr-6" // Increased spacing
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
             >
               <a href="/projects" className="hover:text-yellow-300 font-semibold text-xl">Projects</a>
             </motion.li>
             <motion.li
-              className="mr-4"
+              className="mr-6" // Increased spacing
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
             >
               <a href="/timeline" className="hover:text-yellow-300 font-semibold text-xl">Education</a>
             </motion.li>
             <motion.li
+              className="mr-6" // Increased spacing
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
             >
@@ -111,6 +112,7 @@ const Navbar = ({ darkMode }) => {
             <a href="/timeline" className="block py-2 px-4 hover:bg-yellow-500">Education</a>
           </motion.li>
           <motion.li
+            className="mb-4"
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
           >
