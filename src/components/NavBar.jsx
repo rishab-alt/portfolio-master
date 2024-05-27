@@ -1,4 +1,3 @@
-// src/components/Navbar.js
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 
@@ -20,22 +19,27 @@ const Navbar = ({ darkMode }) => {
       >
         <div className="container mx-auto flex justify-between items-center">
           <motion.div
-            className="text-3xl font-bold"
-            whileHover={{ scale: 1.1 }}
+            className="text-4xl font-bold"
+            whileHover={{ scale: 1.2, rotate: 10 }}
             whileTap={{ scale: 0.9 }}
           >
             Rishab
           </motion.div>
           {/* Hamburger Menu Icon */}
           <div className="md:hidden">
-            <button onClick={toggleMenu} className="text-white focus:outline-none">
+            <motion.button
+              onClick={toggleMenu}
+              className="text-white focus:outline-none"
+              whileHover={{ scale: 1.2 }}
+              whileTap={{ scale: 0.9 }}
+            >
               <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16m-7 6h7"></path>
               </svg>
-            </button>
+            </motion.button>
           </div>
           {/* Desktop Navigation Menu */}
-          <ul className="hidden md:flex">
+          <ul className="hidden md:flex space-x-8">
             <motion.li
               className="mr-4"
               whileHover={{ scale: 1.1 }}
@@ -81,7 +85,7 @@ const Navbar = ({ darkMode }) => {
         animate={{ opacity: isOpen ? 1 : 0, height: isOpen ? 'auto' : 0 }}
         transition={{ duration: 0.3 }}
       >
-        <ul className={`text-center ${isOpen ? 'block' : 'hidden'}`}>
+        <ul className={`text-center ${isOpen ? 'block' : 'hidden'} space-y-4`}>
           <motion.li
             className="mb-4"
             whileHover={{ scale: 1.1 }}
