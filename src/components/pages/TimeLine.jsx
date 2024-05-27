@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Navbar from '../NavBar';
+import { motion } from 'framer-motion';
 
 const TimelinePage = () => {
   const [darkMode, setDarkMode] = useState(true);
@@ -17,7 +18,7 @@ const TimelinePage = () => {
   ];
 
   return (
-    <div className={`bg-black text-white min-h-screen flex flex-col justify-center items-center`}>
+    <div className={`bg-${darkMode ? 'black' : 'white'} text-${darkMode ? 'white' : 'black'} min-h-screen flex flex-col`}>
       <Navbar darkMode={darkMode} />
 
       {/* Content */}
@@ -25,12 +26,18 @@ const TimelinePage = () => {
         <h1 className="text-3xl md:text-4xl font-bold mt-8 mb-4 text-yellow-500 text-center">My Life!</h1>
         <div className="flex flex-col space-y-8 w-full max-w-lg items-center">
           {timelineEvents.map((event, index) => (
-            <div key={index} className="w-full flex justify-center">
-              <div className="bg-gray-800 text-white rounded-lg shadow-lg p-4 md:p-6 max-w-md w-full" style={{ transitionDuration: '0.3s' }}>
+            <motion.div 
+              key={index}
+              className="w-full flex justify-center"
+              initial={{ opacity: 0, y: 50 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: index * 0.3 }}
+            >
+              <div className="bg-gray-800 text-white rounded-lg shadow-lg p-4 md:p-6 max-w-md w-full hover:shadow-xl transition-shadow duration-300 ease-in-out">
                 <p className="text-lg md:text-xl mb-2 text-center">{event.content}</p>
-                <p className="text-sm text-gray-400 text-yellow-500 text-center">{event.date}</p>
+                <p className="text-sm text-yellow-500 text-center">{event.date}</p>
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>
