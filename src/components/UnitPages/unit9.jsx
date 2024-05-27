@@ -19,7 +19,7 @@ const DownloadPage = () => {
     <div className={`bg-black text-white min-h-screen flex flex-col justify-center items-center`}>
       <Navbar darkMode={darkMode} />
 
-      <div className="container mx-auto py-8 flex flex-col md:flex-row">
+      <div className="container mx-auto py-[50px] flex flex-col md:flex-row">
         <div className="w-full md:w-1/2 p-4">
           <div className="max-w-lg mx-auto rounded-lg overflow-hidden shadow-lg mb-4 bg-gray-800">
             <div className="p-4">

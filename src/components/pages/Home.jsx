@@ -35,13 +35,7 @@ const HomePage = () => {
 
   return (
     <div className="bg-black text-white min-h-screen flex flex-col justify-center items-center">
-      {isLoading ? (
-        // Loading Screen
-        <div className="absolute inset-0 flex justify-center items-center">
-          <div className="animate-spin rounded-full h-32 w-32 border-t-2 border-b-2 border-yellow-500"></div>
-        </div>
-      ) : (
-        <>
+      
            {/* Navigation Bar */}
            <motion.nav
         className={`navbar bg-${darkMode ? 'black' : 'white'} text-yellow-500 p-4 fixed top-0 left-0 right-0 z-10`}
@@ -188,8 +182,8 @@ const HomePage = () => {
               </motion.a>
             </div>
           </motion.section>
-        </>
-      )}
+  
+   
 
 
     </div>
