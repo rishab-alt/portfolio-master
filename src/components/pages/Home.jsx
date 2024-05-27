@@ -35,9 +35,9 @@ const HomePage = () => {
 
   return (
     <div className="bg-black text-white min-h-screen flex flex-col justify-center items-center">
-      
+     
            {/* Navigation Bar */}
-           <motion.nav
+      <motion.nav
         className={`navbar bg-${darkMode ? 'black' : 'white'} text-yellow-500 p-4 fixed top-0 left-0 right-0 z-10`}
         initial={{ opacity: 0, y: -50 }}
         animate={{ opacity: 1, y: 0 }}
@@ -62,35 +62,34 @@ const HomePage = () => {
           {/* Desktop Navigation Menu */}
           <ul className="hidden md:flex">
             <motion.li
-              className="mr-6" // Increased spacing
+              className="mr-6"
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
             >
               <a href="/" className="hover:text-yellow-300 font-semibold text-xl">Home</a>
             </motion.li>
             <motion.li
-              className="mr-6" // Increased spacing
+              className="mr-6"
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
             >
               <a href="/about" className="hover:text-yellow-300 font-semibold text-xl">About</a>
             </motion.li>
             <motion.li
-              className="mr-6" // Increased spacing
+              className="mr-6"
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
             >
               <a href="/projects" className="hover:text-yellow-300 font-semibold text-xl">Projects</a>
             </motion.li>
             <motion.li
-              className="mr-6" // Increased spacing
+              className="mr-6"
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
             >
               <a href="/timeline" className="hover:text-yellow-300 font-semibold text-xl">Education</a>
             </motion.li>
             <motion.li
-              className="mr-6" // Increased spacing
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
             >
@@ -102,12 +101,12 @@ const HomePage = () => {
 
       {/* Mobile Navigation Menu */}
       <motion.div
-        className={`md:hidden bg-${darkMode ? 'black' : 'white'} text-${darkMode ? 'white' : 'black'} py-4 fixed top-16 left-0 right-0 z-10`}
+        className={`md:hidden bg-${darkMode ? 'black' : 'white'} text-${darkMode ? 'white' : 'black'} py-4 absolute top-16 left-0 right-0 z-10`}
         initial={{ opacity: 0, height: 0 }}
         animate={{ opacity: isOpen ? 1 : 0, height: isOpen ? 'auto' : 0 }}
         transition={{ duration: 0.3 }}
       >
-        <ul className={`text-center ${isOpen ? 'block' : 'hidden'}`}>
+        <ul className={`text-center ${isOpen ? '' : 'hidden'}`}>
           <motion.li
             className="mb-4"
             whileHover={{ scale: 1.1 }}
@@ -137,7 +136,6 @@ const HomePage = () => {
             <a href="/timeline" className="block py-2 px-4 hover:bg-yellow-500">Education</a>
           </motion.li>
           <motion.li
-            className="mb-4"
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
           >
@@ -182,8 +180,7 @@ const HomePage = () => {
               </motion.a>
             </div>
           </motion.section>
-  
-   
+    
 
 
     </div>
