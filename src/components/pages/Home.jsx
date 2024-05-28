@@ -37,7 +37,7 @@ const HomePage = () => {
   return (
     <div className="bg-black text-white min-h-screen flex flex-col justify-center items-center">
      
-      <Nav /> 
+      <Nav darkMode={darkMode} /> 
 
           {/* Hero Section */}
           <motion.section
