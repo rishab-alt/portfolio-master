@@ -4,7 +4,7 @@ import pdfUrl1 from '../Downloads/unit9/Unit 9 Assignment 1_Rish.pdf';
 import pdfUrl2 from '../Downloads/unit9/U9_Assignment_2 Rish.pdf';
 import pdfUrl3 from '../Downloads/unit9/U9_Assignment_3_Rish.pdf';
 import pdfUrl4 from '../Downloads/unit9/U9_Assignment_4 _Rish.pdf';
-import excelFinal from '../Downloads/unit9/Spreadsheet project_current_final 2.xlsm' 
+import excelFinal from '../Downloads/unit9/Spreadsheet project_current_final 2.xlsm'
 
 
 const DownloadPage = () => {
@@ -26,7 +26,7 @@ const DownloadPage = () => {
               <img className="w-full object-cover" src="https://www.svgrepo.com/show/373589/excel.svg" alt="Placeholder" />
               <div className="mt-4">
                 <p className="text-base">
-                  In this unit , we explore the use of Excel spreadsheets in daily life, aswell as this , looking at  functions like VLOOKUP, Filters, 
+                  In this unit , we explore the use of Excel spreadsheets in daily life, aswell as this , looking at  functions like VLOOKUP, Filters,
                   colour coding etc to make the spreadsheet standout. below is the final version of the spreadsheet produced
                 </p>
               </div>

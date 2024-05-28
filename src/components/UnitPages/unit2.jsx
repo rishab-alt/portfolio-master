@@ -24,7 +24,7 @@ const ProjectPage = () => {
           <div className="px-6 py-4">
             <div className="font-bold text-xl text-white mb-2">Technology Systems</div>
             <p className="text-base text-gray-300">
-            In this tech systems exam, we study component interactions, software types, and data processing in computer systems.            </p>
+              In this tech systems exam, we study component interactions, software types, and data processing in computer systems.            </p>
           </div>
         </div>
       </div>

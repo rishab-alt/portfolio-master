@@ -23,7 +23,7 @@ const DownloadPage = () => {
               <img className="w-full object-cover" src="https://www.svgrepo.com/show/420902/computer-hardware-monitor-2.svg" alt="Placeholder" />
               <div className="mt-4">
                 <p className={`text-base text-gray-300`}>
-                  In this unit , we explore the use of computer hardware within technology system. we go through the steps to plan to install 
+                  In this unit , we explore the use of computer hardware within technology system. we go through the steps to plan to install
                   for a fake technology company, installing and maintaining the system for the fake business, and we write a review.
                 </p>
               </div>

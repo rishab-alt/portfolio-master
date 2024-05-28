@@ -26,7 +26,7 @@ const TimelinePage = () => {
         <h1 className="text-3xl md:text-4xl font-bold mt-8 mb-4 text-yellow-500 text-center">My Life!</h1>
         <div className="flex flex-col space-y-8 w-full max-w-lg items-center">
           {timelineEvents.map((event, index) => (
-            <motion.div 
+            <motion.div
               key={index}
               className="w-full flex justify-center"
               initial={{ opacity: 0, y: 50 }}

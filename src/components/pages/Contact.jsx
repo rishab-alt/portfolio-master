@@ -12,7 +12,7 @@ const Contact = () => {
     setDarkMode(prefersDarkMode);
   }, []);
 
- 
+
   return (
     <div className="bg-black text-white min-h-screen flex flex-col justify-center items-center">
       <Navbar darkMode={darkMode} />
