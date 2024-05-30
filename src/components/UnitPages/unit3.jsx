@@ -20,14 +20,12 @@ const DownloadPage = () => {
               <img className="w-full object-cover" src="https://www.svgrepo.com/show/420902/computer-hardware-monitor-2.svg" alt="Placeholder" />
               <div className="mt-4">
                 <p className={`text-base text-gray-300`}>
-                  digital portfolio
+                  In this unit , we explore the aspects of making a digital portfolio , this includes designing and actually making 
+                  a portfolio using web tools like wix , the website you are seeing is coded myself using a framework called React which is 
+                  common among websites these days. 
                 </p>
               </div>
-              <div className="mt-4">
-                <a href={pdfUrl1} className={`block text-base py-2 px-4 bg-yellow-500 text-black rounded-md shadow-md hover:bg-yellow-400 focus:outline-none`}>
-                  Download Final Application Here!
-                </a>
-              </div>
+             
             </div>
           </div>
         </div>

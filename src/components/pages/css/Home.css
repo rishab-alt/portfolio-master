@@ -1,0 +1,14 @@
+@media (max-width: 768px) { /* Adjust for smaller devices */
+    .hero {
+      flex-direction: column-reverse; /* Reverse the order of elements for mobile */
+    }
+  
+    .desktop-image {
+      display: none; /* Hide the image on desktop */
+    }
+  
+    .hero > .w-full.md\:w-2\/5 {
+      margin-top: -80px; /* Adjust margin for spacing on mobile */
+    }
+  }
+  
