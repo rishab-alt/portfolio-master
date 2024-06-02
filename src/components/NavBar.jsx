@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 
-const Navbar = ({ darkMode }) => {
+const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -12,7 +12,7 @@ const Navbar = ({ darkMode }) => {
     <div>
       {/* Navigation Bar */}
       <motion.nav
-        className={`navbar bg-${darkMode ? 'black' : 'white'} text-yellow-500 p-4 fixed top-0 left-0 right-0 z-10`}
+        className="navbar bg-black text-yellow-500 p-4 fixed top-0 left-0 right-0 z-10"
         initial={{ opacity: 0, y: -50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, delay: 0.5 }}
@@ -80,7 +80,7 @@ const Navbar = ({ darkMode }) => {
 
       {/* Mobile Navigation Menu */}
       <motion.div
-        className={`md:hidden bg-${darkMode ? 'black' : 'white'} text-${darkMode ? 'white' : 'black'} py-4 fixed top-16 left-0 right-0 z-10`}
+        className="md:hidden bg-black text-white py-4 fixed top-16 left-0 right-0 z-10"
         initial={{ opacity: 0, height: 0 }}
         animate={{ opacity: isOpen ? 1 : 0, height: isOpen ? 'auto' : 0 }}
         transition={{ duration: 0.3 }}

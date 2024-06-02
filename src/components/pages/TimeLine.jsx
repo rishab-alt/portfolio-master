@@ -18,7 +18,7 @@ const TimelinePage = () => {
   ];
 
   return (
-    <div className={`bg-${darkMode ? 'black' : 'white'} text-${darkMode ? 'white' : 'black'} min-h-screen flex flex-col`}>
+<div className="bg-black text-white min-h-screen flex flex-col">
       <Navbar darkMode={darkMode} />
 
       {/* Content */}
