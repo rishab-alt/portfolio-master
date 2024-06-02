@@ -18,12 +18,14 @@ const Navbar = () => {
         transition={{ duration: 0.5, delay: 0.5 }}
       >
         <div className="container mx-auto flex justify-between items-center">
+       
           <motion.div
             className="text-4xl font-bold"
             whileHover={{ scale: 1.2, rotate: 10 }}
             whileTap={{ scale: 0.9 }}
           >
-            Rishab
+            <a href="/">Rishab</a>
+          
           </motion.div>
           {/* Hamburger Menu Icon */}
           <div className="md:hidden">

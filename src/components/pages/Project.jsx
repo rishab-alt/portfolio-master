@@ -17,8 +17,9 @@ const ProjectPage = () => {
       opacity: 1,
       y: 0,
       transition: {
-        delay: i * 0.2,
-        duration: 0.5,
+        delay: i * 0.15,
+        duration: 0.6,
+        ease: 'easeInOut'
       },
     }),
   };
@@ -44,6 +45,7 @@ const ProjectPage = () => {
                 animate="visible"
                 variants={cardVariants}
                 className="rounded-lg overflow-hidden bg-gray-800 transition-all duration-300 ease-in-out cursor-pointer border border-gray-700 shadow-md hover:bg-gray-700 hover:text-white"
+                whileHover={{ scale: 1.05 }}
               >
                 <div className="p-4">
                   <h3 className="text-lg font-semibold mb-2 text-white">{card.title}</h3>
