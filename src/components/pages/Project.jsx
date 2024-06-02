@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import Navbar from '../NavBar';
+import { motion } from 'framer-motion';
 
 const ProjectPage = () => {
   const [darkMode, setDarkMode] = useState(true);
@@ -10,70 +11,51 @@ const ProjectPage = () => {
     setDarkMode(prefersDarkMode);
   }, []);
 
+  const cardVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: (i) => ({
+      opacity: 1,
+      y: 0,
+      transition: {
+        delay: i * 0.2,
+        duration: 0.5,
+      },
+    }),
+  };
+
   return (
     <div className="bg-black text-white min-h-screen flex flex-col justify-center items-center">
       <Navbar darkMode={darkMode} />
 
       <div className="container mx-auto py-8 px-4 pt-20 transition-all duration-300 ease-in-out">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mt-8">
-          {/* Card 1 */}
-          <Link to="/unit1">
-            <div className="rounded-lg overflow-hidden bg-gray-800 transition-all duration-300 ease-in-out cursor-pointer border border-gray-700 shadow-md hover:bg-gray-700 hover:text-white">
-              <div className="p-4">
-                <h3 className="text-lg font-semibold mb-2 text-white">Unit 1 - Online World</h3>
-                <p className="text-yellow-500 text-gray-400">College Exam Unit</p>
-              </div>
-            </div>
-          </Link>
-          {/* Card 2 */}
-          <Link to="/unit2">
-            <div className="rounded-lg overflow-hidden bg-gray-800 transition-all duration-300 ease-in-out cursor-pointer border border-gray-700 shadow-md hover:bg-gray-700 hover:text-white">
-              <div className="p-4">
-                <h3 className="text-lg font-semibold mb-2 text-white">Unit 2 - Technology Systems</h3>
-                <p className="text-yellow-500 text-gray-400">College Exam Unit</p>
-              </div>
-            </div>
-          </Link>
-          {/* Card 3 */}
-          <Link to="/unit3">
-            <div className="rounded-lg overflow-hidden bg-gray-800 transition-all duration-300 ease-in-out cursor-pointer border border-gray-700 shadow-md hover:bg-gray-700 hover:text-white">
-              <div className="p-4">
-                <h3 className="text-lg font-semibold mb-2 text-white">Unit 3 - Digital Portfolio</h3>
-                <p className="text-yellow-500 text-gray-400">College Assignment Unit</p>
-              </div>
-            </div>
-          </Link>
-          {/* Card 4 */}
-          <Link to="/unit9">
-            <div className="rounded-lg overflow-hidden bg-gray-800 transition-all duration-300 ease-in-out cursor-pointer border border-gray-700 shadow-md hover:bg-gray-700 hover:text-white">
-              <div className="p-4">
-                <h3 className="text-lg font-semibold mb-2 text-white">Unit 9 - Spreadsheets</h3>
-                <p className="text-yellow-500 text-gray-400">College Assignment Unit</p>
-              </div>
-            </div>
-          </Link>
-          {/* Card 5 */}
-          <Link to="/unit12">
-            <div className="rounded-lg overflow-hidden bg-gray-800 transition-all duration-300 ease-in-out cursor-pointer border border-gray-700 shadow-md hover:bg-gray-700 hover:text-white">
-              <div className="p-4">
-                <h3 className="text-lg font-semibold mb-2 text-white">Unit 12 - Software Development</h3>
-                <p className="text-yellow-500 text-gray-400">College Assignment Unit</p>
-              </div>
-            </div>
-          </Link>
-          {/* Card 6 */}
-          <Link to="/unit14">
-            <div className="rounded-lg overflow-hidden bg-gray-800 transition-all duration-300 ease-in-out cursor-pointer border border-gray-700 shadow-md hover:bg-gray-700 hover:text-white">
-              <div className="p-4">
-                <h3 className="text-lg font-semibold mb-2 text-white">Unit 14 - Technology Systems</h3>
-                <p className="text-yellow-500 text-gray-400">College Assignment Unit</p>
-              </div>
-            </div>
-          </Link>
+          {[
+            { link: "/unit1", title: "Unit 1 - Online World", description: "College Exam Unit" },
+            { link: "/unit2", title: "Unit 2 - Technology Systems", description: "College Exam Unit" },
+            { link: "/unit3", title: "Unit 3 - Digital Portfolio", description: "College Assignment Unit" },
+            { link: "/unit9", title: "Unit 9 - Spreadsheets", description: "College Assignment Unit" },
+            { link: "/unit12", title: "Unit 12 - Software Development", description: "College Assignment Unit" },
+            { link: "/unit14", title: "Unit 14 - Technology Systems", description: "College Assignment Unit" },
+          ].map((card, index) => (
+            <Link to={card.link} key={index}>
+              <motion.div
+                custom={index}
+                initial="hidden"
+                animate="visible"
+                variants={cardVariants}
+                className="rounded-lg overflow-hidden bg-gray-800 transition-all duration-300 ease-in-out cursor-pointer border border-gray-700 shadow-md hover:bg-gray-700 hover:text-white"
+              >
+                <div className="p-4">
+                  <h3 className="text-lg font-semibold mb-2 text-white">{card.title}</h3>
+                  <p className="text-yellow-500 text-gray-400">{card.description}</p>
+                </div>
+              </motion.div>
+            </Link>
+          ))}
         </div>
       </div>
     </div>
   );
-}
+};
 
 export default ProjectPage;
