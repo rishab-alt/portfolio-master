@@ -1,14 +1,148 @@
-@media (max-width: 768px) { /* Adjust for smaller devices */
-    .hero {
-      flex-direction: column-reverse; /* Reverse the order of elements for mobile */
-    }
-  
-    .desktop-image {
-      display: none; /* Hide the image on desktop */
-    }
-  
-    .hero > .w-full.md\:w-2\/5 {
-      margin-top: -80px; /* Adjust margin for spacing on mobile */
-    }
+:root {
+  --primary-bg-color: black;
+  --primary-text-color: white;
+  --secondary-bg-color: white;
+  --secondary-text-color: black;
+  --accent-color: #f6ad55;
+  --accent-hover-color: #ed8936;
+}
+
+
+.graphic-container {
+  max-height: 80vh;
+  /* Set a maximum height for the image container */
+  overflow: hidden;
+  /* Hide overflowing content */
+}
+
+@media (max-width: 767px) {
+  .graphic-container {
+    max-height: 44440vh;
+    /* Adjust maximum height for smaller screens */
+    margin-top: 2rem;
+    /* Add margin to the top to create space */
   }
-  
+}
+
+
+
+
+.min-h-screen {
+  min-height: 100vh;
+}
+
+.loading-screen {
+  background-color: var(--primary-bg-color);
+}
+
+.loading-image {
+  animation: spin 1s linear infinite;
+}
+
+.hero {
+  margin-top: 2rem;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  /* Center text by default */
+}
+
+.cta-btn {
+  background-color: var(--accent-color);
+  color: var(--secondary-text-color);
+  padding: 0.75rem 2rem;
+  border-radius: 9999px;
+  font-weight: 600;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.cta-btn:hover {
+  background-color: var(--accent-hover-color);
+  color: var(--primary-text-color);
+}
+
+.theme-toggle {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  padding: 0.5rem;
+  background-color: var(--secondary-bg-color);
+  color: var(--secondary-text-color);
+  border-radius: 9999px;
+  transition: transform 0.2s;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@media (min-width: 768px) {
+  .hero {
+    flex-direction: row;
+    text-align: left;
+    /* Align text to the left for larger screens */
+  }
+
+  .content {
+    width: 60%;
+  }
+
+  .graphic-container {
+    width: 40%;
+    order: 1;
+    /* Ensures the graphic is on the right side in desktop mode */
+  }
+}
+
+@media (max-width: 767px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .content,
+  .graphic-container {
+    width: 100%;
+  }
+
+  .graphic-container {
+    order: -1;
+    /* Moves the graphic to the top in mobile mode */
+    margin-bottom: 2rem;
+    /* Adds spacing below the graphic */
+    display: flex;
+    justify-content: center;
+    /* Centers the graphic horizontally */
+  }
+
+  .graphic-container img {
+    max-width: 63%;
+    /* Reduce the graphic size to 60% of the container's width */
+    height: auto;
+    /* Maintain aspect ratio */
+  }
+
+  .cta-btn {
+    padding: 0.5rem 1rem;
+  }
+
+  .theme-toggle {
+    top: 1rem;
+    right: 1rem;
+    padding: 0.25rem 0.5rem;
+  }
+}

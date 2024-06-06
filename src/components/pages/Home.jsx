@@ -2,36 +2,10 @@ import React, { useState, useEffect } from 'react';
 import Graphic from '../images/undraw_drink_coffee_v3au.svg';
 import Nav from '../NavBar';
 import { motion } from 'framer-motion';
-import './css/Home.css'; // Import CSS file for styling
+import './css/Home.css';
 
 const HomePage = () => {
-  const [isLoading, setIsLoading] = useState(true);
-  const [darkMode] = useState(true);
-  const [isOpen, setIsOpen] = useState(false);
-
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setIsLoading(false);
-    }, 2000);
-
-    return () => clearTimeout(timer);
-  }, []);
-
-  useEffect(() => {
-    const handleResize = () => {
-      setIsOpen(false);
-    };
-
-    window.addEventListener('resize', handleResize);
-
-    return () => {
-      window.removeEventListener('resize', handleResize);
-    };
-  }, []);
-
-  const toggleMenu = () => {
-    setIsOpen(!isOpen);
-  };
+  const [darkMode, setDarkMode] = useState(true);
 
   const containerVariants = {
     hidden: { opacity: 0, y: 50 },
@@ -51,18 +25,42 @@ const HomePage = () => {
     visible: { opacity: 1, y: 0 }
   };
 
+  const toggleTheme = () => {
+    setDarkMode(!darkMode);
+  };
+
   return (
     <div className={`min-h-screen flex flex-col justify-center items-center ${darkMode ? 'bg-black text-white' : 'bg-white text-black'}`}>
       <Nav darkMode={darkMode} />
       <motion.section
         id="home"
-        className="hero flex flex-col md:flex-row justify-between items-center text-center md:text-left p-6 mt-16 md:mt-24"
+        className="hero container flex flex-col md:flex-row justify-between items-center text-center md:text-left p-6 mt-16 md:mt-24"
         variants={containerVariants}
         initial="hidden"
         animate="visible"
       >
         <motion.div
-          className="w-full md:w-3/5 mb-10 md:mb-0"
+          className="graphic-container w-full md:w-2/5 mb-10 md:mb-0"
+          variants={itemVariants}
+          whileHover={{ scale: 1.1, rotate: 5 }} // Adjust the hover effect here
+          transition={{ type: 'spring', stiffness: 300 }}
+        >
+          <motion.img
+            src={Graphic}
+            alt="Graphic"
+            className="desktop-image"
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.5 }}
+            whileHover={{
+              scale: 1.1,
+              rotate: 5, // Adjust the hover effect here
+              transition: { type: 'spring', stiffness: 300 }
+            }}
+          />
+        </motion.div>
+        <motion.div
+          className="content w-full md:w-3/5"
           variants={itemVariants}
         >
           <motion.h1
@@ -87,27 +85,8 @@ const HomePage = () => {
             View Projects
           </motion.a>
         </motion.div>
-        <motion.div
-          className="w-full md:w-2/5"
-          variants={itemVariants}
-          whileHover={{ scale: 1.05, rotate: 2 }}
-          transition={{ type: 'spring', stiffness: 300 }}
-        >
-          <motion.img
-            src={Graphic}
-            alt="Graphic"
-            className="desktop-image"
-            initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.5 }}
-            whileHover={{
-              scale: 1.05,
-              rotate: 2,
-              transition: { type: 'spring', stiffness: 300 }
-            }}
-          />
-        </motion.div>
       </motion.section>
+      <div className={`background-effect ${darkMode ? 'bg-black' : 'bg-white'}`}></div>
     </div>
   );
 };
