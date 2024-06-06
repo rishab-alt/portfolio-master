@@ -27,10 +27,7 @@ const DownloadPage = () => {
               <img className="w-full object-cover" src="https://www.svgrepo.com/show/373589/excel.svg" alt="Placeholder" />
               <div className="mt-4">
                 <p className="text-base text-gray-300">
-                  In this unit, we explore the aspects of making a digital portfolio, including designing and creating
-                  a portfolio using web tools like Wix. The website you are seeing is coded myself using a framework called React,
-                  which is common among websites these days.
-                </p>
+                In this unit , we explore the use of Excel spreadsheets and how it can be used to benefit certain sectors, mainly with increasing accuracy , productivity and usability for a business or organisation. We then go onto designing the spreadsheet which makes use of worksheet structure diagrams.                </p>
               </div>
               <div className="mt-4">
                 <a href={excelFinal} className="block text-base py-2 px-4 bg-yellow-500 text-black rounded-md shadow-md hover:bg-yellow-400 focus:outline-none">

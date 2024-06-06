@@ -38,9 +38,9 @@ const ProjectPage = () => {
             <div className="max-w-sm rounded overflow-hidden shadow-lg my-2">
               <img className="w-full" src="https://www.svgrepo.com/show/420911/computer-hardware-internet.svg" alt="Landscape" />
               <div className="px-6 py-4">
-                <div className="font-bold text-xl text-white mb-2">Online World</div>
+                <div className="font-bold text-xl text-white mb-2">Technology Systems</div>
                 <p className="text-base text-gray-300">
-                In this tech systems exam, we study component interactions, software types, and data processing in computer systems.                </p>
+                Technology systems have evolved over the last century and as they were being built, more technology made things possible. We go though the hardware components needed to run a technology system (e.g. computer). We also get an understanding of how the data flows between the components and how data is processed. Then we discuss the types of software needed in an operating system such as the bios in a computer, or a disk defragmenter.</p>
               </div>
             </div>
           </div>
