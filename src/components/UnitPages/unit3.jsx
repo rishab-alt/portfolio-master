@@ -36,7 +36,7 @@ const DownloadPage = () => {
                 Click the link below to download.
               </p>
               <div className="mt-4">
-                <a href={pdfUrl1} className="block text-base py-2 px-4 bg-yellow-500 text-black rounded-md shadow-md hover:bg-yellow-400 focus:outline-none">
+                <a href='#' className="block text-base py-2 px-4 bg-yellow-500 text-black rounded-md shadow-md hover:bg-yellow-400 focus:outline-none">
                   Download Link 1
                 </a>
               </div>
