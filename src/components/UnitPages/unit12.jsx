@@ -14,7 +14,7 @@ const DownloadPage = () => {
   }, []);
 
   return (
-    <div className={`bg-black text-white min-h-screen flex flex-col justify-center items-center`}>
+    <div className={`bg-gray-900 text-white min-h-screen flex flex-col justify-center items-center`}>
       <Navbar darkMode={darkMode} />
 
       <div className="container mx-auto py-8 px-4 mt-16 flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4">

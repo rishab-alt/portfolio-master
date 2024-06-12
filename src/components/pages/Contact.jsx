@@ -47,7 +47,7 @@ const Contact = () => {
   };
 
   return (
-    <div className="bg-black text-white min-h-screen flex flex-col justify-center items-center">
+    <div className="bg-gray-900 text-white min-h-screen flex flex-col justify-center items-center">
       <Navbar darkMode={darkMode} />
       <div className="min-h-screen flex flex-col justify-center items-center container mx-auto py-8 px-4 pt-20">
         <div className="max-w-md p-8 bg-gray-800 rounded-lg shadow-lg animate-fade-in text-center">
