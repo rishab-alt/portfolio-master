@@ -13,16 +13,21 @@ const HomePage = () => {
       opacity: 1,
       y: 0,
       transition: {
-        duration: 0.5,
-        delayChildren: 0.5,
-        staggerChildren: 0.2
+        duration: 0.8,
+        ease: "easeOut",
+        when: "beforeChildren"
       }
     }
   };
 
+  const graphicVariants = {
+    hidden: { opacity: 0, scale: 0.5 },
+    visible: { opacity: 1, scale: 1, transition: { duration: 0.5, ease: "easeOut" } }
+  };
+
   const itemVariants = {
     hidden: { opacity: 0, y: 50 },
-    visible: { opacity: 1, y: 0 }
+    visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: "easeOut" } }
   };
 
   const toggleTheme = () => {
@@ -39,13 +44,14 @@ const HomePage = () => {
         initial="hidden"
         animate="visible"
       >
-        <div
-          className="graphic-container w-full md:w-2/5 mb-10 md:mb-0"
-        >
-          <img
+        <div className="graphic-container w-full md:w-2/5 mb-10 md:mb-0">
+          <motion.img
             src={Graphic}
             alt="Graphic"
             className="desktop-image"
+            variants={graphicVariants}
+            initial="hidden"
+            animate="visible"
           />
         </div>
         <motion.div
@@ -55,14 +61,14 @@ const HomePage = () => {
           <motion.h1
             className="text-4xl md:text-5xl font-bold mb-4"
             variants={itemVariants}
-            style={{ color: darkMode ? '#FFD700' : '#DAA520' }} // Darker gold accent color for the title
+            style={{ color: darkMode ? '#FFD700' : '#DAA520' }}
           >
             Welcome to My Portfolio
           </motion.h1>
           <motion.p
             className="text-xl md:text-2xl mb-8"
             variants={itemVariants}
-            style={{ color: darkMode ? '#ADD8E6' : '#5F9EA0' }} // Darker cyan accent color for the paragraph
+            style={{ color: darkMode ? '#ADD8E6' : '#5F9EA0' }}
           >
             Showcasing my projects and skills
           </motion.p>
