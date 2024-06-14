@@ -25,7 +25,7 @@ const ProjectPage = () => {
   };
 
   return (
-    <div className="bg-black text-white min-h-screen flex flex-col justify-center items-center">
+    <div className="bg-gray-900 text-white min-h-screen flex flex-col justify-center items-center">
       <Navbar darkMode={darkMode} />
 
       <div className="container mx-auto py-8 px-4 pt-20 transition-all duration-300 ease-in-out">

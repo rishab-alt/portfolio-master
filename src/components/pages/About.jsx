@@ -11,7 +11,7 @@ const AboutPage = () => {
   }, []);
 
   return (
-<div className="bg-black text-white min-h-screen flex flex-col">
+<div className="bg-gray-900 text-white min-h-screen flex flex-col">
       <Navbar  />
 
       {/* Content */}
@@ -28,7 +28,19 @@ const AboutPage = () => {
           </p>
         </motion.div>
 
-        
+        {/* Education Section */}
+        <motion.div
+          className="max-w-md w-full bg-gray-800 rounded-lg shadow-lg text-center p-6 md:p-8 transition-all duration-300 ease-in-out hover:shadow-xl"
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.7 }}
+        >
+          <h2 className="text-2xl md:text-3xl font-bold mb-4">Education</h2>
+          <ul className="list-disc list-inside text-left text-lg md:text-xl space-y-2">
+            <li className="mb-2">GCSE'S</li>
+            <li className="mb-2">BTEC First Certificate in IT and Creative Tech at The Manchester College</li>
+          </ul>
+        </motion.div>
       </div>
     </div>
   );

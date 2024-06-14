@@ -17,17 +17,17 @@ const DownloadPage = () => {
   const pdfUrls = [pdfUrl1, pdfUrl2, pdfUrl3, pdfUrl4];
 
   return (
-    <div className={`bg-black text-white min-h-screen flex flex-col justify-center items-center`}>
+    <div className={`bg-gray-900 text-white min-h-screen flex flex-col justify-center items-center`}>
       <Navbar darkMode={darkMode} />
 
-      <div className="container mx-auto py-8 px-4 mt-16 flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4">
+      <div className="container mx-auto pt-20   px-4 mt-16 flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4">
         <div className="w-full md:w-1/2">
           <div className="max-w-md mx-auto bg-gray-800 rounded-lg overflow-hidden shadow-lg mb-4">
             <div className="p-4">
               <img className="w-full object-cover" src="https://www.svgrepo.com/show/373589/excel.svg" alt="Placeholder" />
               <div className="mt-4">
                 <p className="text-base text-gray-300">
-                In this unit , we explore the use of Excel spreadsheets and how it can be used to benefit certain sectors, mainly with increasing accuracy , productivity and usability for a business or organisation. We then go onto designing the spreadsheet which makes use of worksheet structure diagrams.                </p>
+                  In this unit , we explore the use of Excel spreadsheets and how it can be used to benefit certain sectors, mainly with increasing accuracy , productivity and usability for a business or organisation. We then go onto designing the spreadsheet which makes use of worksheet structure diagrams.                </p>
               </div>
               <div className="mt-4">
                 <a href={excelFinal} className="block text-base py-2 px-4 bg-yellow-500 text-black rounded-md shadow-md hover:bg-yellow-400 focus:outline-none">
@@ -55,12 +55,12 @@ const DownloadPage = () => {
               </div>
             </div>
           ))}
-         
-          </div>
-        </div>
 
+        </div>
       </div>
-    
+
+    </div>
+
   );
 }
 
