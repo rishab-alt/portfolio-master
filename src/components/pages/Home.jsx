@@ -35,7 +35,7 @@ const HomePage = () => {
   };
 
   return (
-    <div className={`min-h-screen flex flex-col justify-center items-center ${darkMode ? 'bg-gray-900 text-gray-200' : 'bg-gray-100 text-gray-800'}`}>
+    <div className={`pt-2 min-h-screen flex flex-col justify-center items-center ${darkMode ? 'bg-gray-900 text-gray-200' : 'bg-gray-100 text-gray-800'}`}>
       <Nav darkMode={darkMode} />
       <motion.section
         id="home"
