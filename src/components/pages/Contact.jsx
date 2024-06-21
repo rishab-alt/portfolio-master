@@ -8,10 +8,19 @@ import Navbar from '../NavBar';
 
 const Contact = () => {
   const [darkMode, setDarkMode] = useState(true);
+  const [canSubmit, setCanSubmit] = useState(true); // State to control submission
 
   useEffect(() => {
     const prefersDarkMode = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
     setDarkMode(prefersDarkMode);
+  }, []);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCanSubmit(true); // Allow submissions again every 10 minutes
+    }, 10 * 60 * 1000); // 10 minutes in milliseconds
+
+    return () => clearInterval(interval); // Clean up interval on component unmount
   }, []);
 
   const initialValues = {
@@ -27,6 +36,13 @@ const Contact = () => {
   });
 
   const handleSubmit = (values, { setSubmitting, resetForm }) => {
+    if (!canSubmit) {
+      alert('You are submitting too frequently. Please wait a moment.');
+      return;
+    }
+
+    setCanSubmit(false); // Disable submission temporarily
+
     fetch('https://formspree.io/f/mvoejjlq', {
       method: 'POST',
       headers: {
@@ -117,7 +133,7 @@ const Contact = () => {
                 <button
                   type="submit"
                   className="mt-4 p-2 bg-yellow-500 text-black rounded hover:bg-yellow-600"
-                  disabled={isSubmitting}
+                  disabled={isSubmitting || !canSubmit} // Disable button when submitting or during rate limit
                 >
                   Send
                 </button>
