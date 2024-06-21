@@ -11,10 +11,10 @@ const TimelinePage = () => {
   }, []);
 
   const timelineEvents = [
-    { date: '2024', content: 'Ongoing College Course BTEC FIRST CERT IN IT AND CREATIVE TECH' },
-    { date: '2024', content: 'Work placement at Yes Manchester completed' },
-    { date: '2023', content: 'Finished School and Left with GCSEs' },
-    { date: '2018', content: 'Developed a love for programming and cyber security' },
+    { date: '2024', content: 'Successfully completed the BTEC First Certificate course in IT and Creative Technology ' },
+    { date: '2024', content: 'Finished a work placement at Yes Manchester' },
+    { date: '2023', content: 'Graduated from secondary school with GCSE qualifications' },
+    { date: '2018', content: 'Discovered a passion for programming and cybersecurity' },
   ];
 
   return (
