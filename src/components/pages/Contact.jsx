@@ -9,6 +9,7 @@ import Navbar from '../NavBar';
 const Contact = () => {
   const [darkMode, setDarkMode] = useState(true);
   const [canSubmit, setCanSubmit] = useState(true); // State to control submission
+  const [startTime, setStartTime] = useState(Date.now()); // Track when form is loaded
 
   useEffect(() => {
     const prefersDarkMode = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
@@ -26,18 +27,30 @@ const Contact = () => {
   const initialValues = {
     name: '',
     email: '',
-    message: ''
+    message: '',
+    honey: '' // Honeypot field
   };
 
   const validationSchema = Yup.object({
     name: Yup.string().required('Name is required'),
     email: Yup.string().email('Invalid email format').required('Email is required'),
-    message: Yup.string().required('Message is required')
+    message: Yup.string().required('Message is required'),
+    honey: Yup.string().max(0) // Honeypot validation
   });
 
   const handleSubmit = (values, { setSubmitting, resetForm }) => {
     if (!canSubmit) {
       alert('You are submitting too frequently. Please wait a moment.');
+      setSubmitting(false);
+      return;
+    }
+
+    const endTime = Date.now();
+    const timeSpent = endTime - startTime;
+
+    if (timeSpent < 5000) { // If the form was filled out in less than 5 seconds, it's likely a bot
+      alert('You filled out the form too quickly. Please try again.');
+      setSubmitting(false);
       return;
     }
 
@@ -54,6 +67,7 @@ const Contact = () => {
       if (response.ok) {
         alert('Message sent successfully!');
         resetForm();
+        setStartTime(Date.now()); // Reset the start time for the next submission
       } else {
         alert('Failed to send message.');
       }
@@ -129,6 +143,15 @@ const Contact = () => {
                     className="w-full mt-1 p-2 bg-gray-700 text-white rounded"
                   />
                   <ErrorMessage name="message" component="div" className="text-red-500 text-sm mt-1" />
+                </div>
+                {/* Honeypot field */}
+                <div className="hidden">
+                  <Field
+                    type="text"
+                    name="honey"
+                    id="honey"
+                    className="w-full mt-1 p-2 bg-gray-700 text-white rounded"
+                  />
                 </div>
                 <button
                   type="submit"
