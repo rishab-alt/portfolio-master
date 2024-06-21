@@ -24,7 +24,7 @@ const TimelinePage = () => {
       {/* Content */}
       <div className="flex-grow flex flex-col items-center py-8 px-4 md:px-8">
         <h1 className="text-3xl md:text-4xl font-bold mt-12 md:mt-16 mb-8 text-yellow-500 text-center">My Life!</h1>
-        <div className="relative flex flex-col items-center w-full max-w-4xl">
+        <div className="relative flex flex-col items-center w-full max-w-3xl">
           {/* Vertical line */}
           <div className="absolute left-1/2 transform -translate-x-1/2 h-full border-l-2 border-yellow-500"></div>
 
@@ -36,9 +36,8 @@ const TimelinePage = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.3 }}
             >
-              <div className={`relative bg-gray-800 text-white rounded-lg shadow-lg p-6 md:p-8 max-w-md w-full transition-all duration-300 hover:shadow-xl ${darkMode ? 'hover:bg-gray-700' : 'hover:bg-gray-200'}`}>
+              <div className={`relative bg-gray-800 text-white rounded-lg shadow-lg p-4 md:p-6 max-w-md w-full ${darkMode ? 'hover:bg-gray-700' : 'hover:bg-gray-300'} transition-all duration-300`}>
                 <div className={`absolute top-1/2 transform -translate-y-1/2 ${index % 2 === 0 ? 'left-0 -ml-4' : 'right-0 -mr-4'} bg-yellow-500 w-4 h-4 rounded-full`}></div>
-                <div className={`absolute top-1/2 transform -translate-y-1/2 ${index % 2 === 0 ? 'left-6' : 'right-6'} w-0 h-0 border-t-8 border-t-transparent border-b-8 border-b-transparent ${index % 2 === 0 ? 'border-r-8 border-r-gray-800' : 'border-l-8 border-l-gray-800'}`}></div>
                 <p className="text-lg md:text-xl mb-2 text-center">{event.content}</p>
                 <p className="text-sm text-yellow-500 text-center">{event.date}</p>
               </div>
