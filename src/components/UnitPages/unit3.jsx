@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import pdfUrl1 from '../Downloads/unit9/Unit 9 Assignment 1_Rish.pdf';
+import pdfUrl1 from '../Downloads/unit3/U03_Assignment_1_ Rish.pdf';
+import pdfUrl2 from '../Downloads/unit3/U03_Assignment_2_ Rish.pdf';
+import pdfUrl3 from '../Downloads/unit3/U03_Assignment_3_Rish.pdf';
 import Navbar from '../NavBar';
 
 const DownloadPage = () => {
@@ -9,6 +11,8 @@ const DownloadPage = () => {
     const prefersDarkMode = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
     setDarkMode(prefersDarkMode);
   }, []);
+
+  const pdfUrls = [pdfUrl1, pdfUrl2, pdfUrl3];
 
   return (
     <div className={`bg-gray-900 text-white min-h-screen flex flex-col justify-center items-center`}>
@@ -29,30 +33,16 @@ const DownloadPage = () => {
           </div>
         </div>
         <div className="w-full md:w-1/2 overflow-y-auto">
-          <div className="max-w-md mx-auto bg-gray-800 rounded-lg overflow-hidden shadow-lg mb-4">
-            <div className="px-6 py-4">
-              <div className="font-bold text-xl mb-2">Assignment 1</div>
-              <p className="text-base text-gray-300">
-                Click the link below to download.
-              </p>
-              <div className="mt-4">
-                <a href='#' className="block text-base py-2 px-4 bg-yellow-500 text-black rounded-md shadow-md hover:bg-yellow-400 focus:outline-none">
-                  Download Link 1
-                </a>
-              </div>
-            </div>
-          </div>
-          {/* Placeholder for other assignments */}
-          {[2, 3, 4].map((index) => (
+        {pdfUrls.map((url, index) => (
             <div key={index} className="max-w-md mx-auto bg-gray-800 rounded-lg overflow-hidden shadow-lg mb-4">
               <div className="px-6 py-4">
-                <div className="font-bold text-xl mb-2">Assignment {index}</div>
+                <div className="font-bold text-xl mb-2">Assignment {index + 1}</div>
                 <p className="text-base text-gray-300">
                   Click the link below to download.
                 </p>
                 <div className="mt-4">
-                  <a href="#" className="block text-base py-2 px-4 bg-yellow-500 text-black rounded-md shadow-md hover:bg-yellow-400 focus:outline-none">
-                    Download Link {index}
+                  <a href={url} className="block text-base py-2 px-4 bg-yellow-500 text-black rounded-md shadow-md hover:bg-yellow-400 focus:outline-none">
+                    Download Link {index + 1}
                   </a>
                 </div>
               </div>
