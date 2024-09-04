@@ -18,8 +18,9 @@ const TimelinePage = () => {
   ];
 
   return (
-    <div className={`min-h-screen flex flex-col ${darkMode ? 'bg-gray-900 text-white' : 'bg-white text-black'}`}>
-      <Navbar darkMode={darkMode} />
+    <div className={`min-h-screen flex flex-col  bg-gray-900`}>
+      <Navbar 
+       />
 
       {/* Content */}
       <div className="flex-grow flex flex-col items-center py-8 px-4 md:px-8">
@@ -36,7 +37,7 @@ const TimelinePage = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.3 }}
             >
-              <div className={`relative bg-gray-800 text-white rounded-lg shadow-lg p-4 md:p-6 max-w-md w-full ${darkMode ? 'hover:bg-gray-700' : 'hover:bg-gray-300'} transition-all duration-300`}>
+              <div className={`relative bg-gray-800 text-white rounded-lg shadow-lg p-4 md:p-6 max-w-md w-full  transition-all duration-300`}>
                 <div className={`absolute top-1/2 transform -translate-y-1/2 ${index % 2 === 0 ? 'left-0 -ml-4' : 'right-0 -mr-4'} bg-yellow-500 w-4 h-4 rounded-full`}></div>
                 <p className="text-lg md:text-xl mb-2 text-center">{event.content}</p>
                 <p className="text-sm text-yellow-500 text-center">{event.date}</p>
