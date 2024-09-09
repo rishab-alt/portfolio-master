@@ -1,18 +1,20 @@
-import React, { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
-import Navbar from '../NavBar';
+import React, { useState, useEffect } from "react";
+import { motion } from "framer-motion";
+import Navbar from "../NavBar";
 
 const AboutPage = () => {
   const [darkMode, setDarkMode] = useState(true);
 
   useEffect(() => {
-    const prefersDarkMode = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+    const prefersDarkMode =
+      window.matchMedia &&
+      window.matchMedia("(prefers-color-scheme: dark)").matches;
     setDarkMode(prefersDarkMode);
   }, []);
 
   return (
-<div className="bg-gray-900 text-white min-h-screen flex flex-col">
-      <Navbar  />
+    <div className="bg-gray-900 text-white min-h-screen flex flex-col">
+      <Navbar />
 
       {/* Content */}
       <div className="flex-grow flex flex-col justify-center items-center py-8 px-4 pt-20 transition-all duration-300 ease-in-out">
@@ -24,11 +26,11 @@ const AboutPage = () => {
         >
           <h1 className="text-3xl md:text-4xl font-bold mb-4">About Me</h1>
           <p className="text-lg md:text-xl">
-            Hello, I'm Rishab. I am a programmer and I mainly build projects using HTML, CSS, and PYTHON, as well as VISUAL BASIC. I like to contribute to GitHub projects and control planes on VATSIM.
+            Hello, I'm Rishab. I am a programmer and I mainly build projects
+            using HTML, CSS, and PYTHON, as well as VISUAL BASIC. I like to
+            contribute to GitHub projects and control planes on VATSIM.
           </p>
         </motion.div>
-
-       
       </div>
     </div>
   );

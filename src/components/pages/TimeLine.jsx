@@ -3,12 +3,6 @@ import Navbar from '../NavBar';
 import { motion } from 'framer-motion';
 
 const TimelinePage = () => {
-  const [darkMode, setDarkMode] = useState(true);
-
-  useEffect(() => {
-    const prefersDarkMode = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
-    setDarkMode(prefersDarkMode);
-  }, []);
 
   const timelineEvents = [
     { date: '2024', content: 'Successfully completed the BTEC First Certificate course in IT and Creative Technology ' },
@@ -19,8 +13,8 @@ const TimelinePage = () => {
 
   return (
     <div className={`min-h-screen flex flex-col  bg-gray-900`}>
-      <Navbar 
-       />
+      <Navbar
+      />
 
       {/* Content */}
       <div className="flex-grow flex flex-col items-center py-8 px-4 md:px-8">

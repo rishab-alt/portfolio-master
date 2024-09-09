@@ -1,22 +1,24 @@
-import React, { useState, useEffect } from 'react';
-import axios from 'axios';
-import Graphic from '../images/undraw_drink_coffee_v3au.svg';
-import Nav from '../NavBar';
-import { motion } from 'framer-motion';
-import './css/Home.css';
+import React, { useState, useEffect } from "react";
+import axios from "axios";
+import Graphic from "../images/undraw_drink_coffee_v3au.svg";
+import Nav from "../NavBar";
+import { motion } from "framer-motion";
+import "./css/Home.css";
 
 const HomePage = () => {
   const [darkMode, setDarkMode] = useState(true);
-  const [joke, setJoke] = useState('');
+  const [joke, setJoke] = useState("");
 
   useEffect(() => {
     const fetchJoke = async () => {
       try {
-        const response = await axios.get('https://official-joke-api.appspot.com/random_joke');
+        const response = await axios.get(
+          "https://official-joke-api.appspot.com/random_joke"
+        );
         setJoke(`${response.data.setup} - ${response.data.punchline}`);
       } catch (error) {
-        console.error('Error fetching the joke', error);
-        setJoke('Failed to fetch a joke');
+        console.error("Error fetching the joke", error);
+        setJoke("Failed to fetch a joke");
       }
     };
 
@@ -30,24 +32,36 @@ const HomePage = () => {
       y: 0,
       transition: {
         duration: 0.8,
-        ease: 'easeOut',
-        when: 'beforeChildren'
-      }
-    }
+        ease: "easeOut",
+        when: "beforeChildren",
+      },
+    },
   };
 
   const graphicVariants = {
     hidden: { opacity: 0, scale: 0.5 },
-    visible: { opacity: 1, scale: 1, transition: { duration: 0.5, ease: 'easeOut' } }
+    visible: {
+      opacity: 1,
+      scale: 1,
+      transition: { duration: 0.5, ease: "easeOut" },
+    },
   };
 
   const itemVariants = {
     hidden: { opacity: 0, y: 50 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: 'easeOut' } }
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.5, ease: "easeOut" },
+    },
   };
 
   return (
-    <div className={`pt-2 min-h-screen flex flex-col justify-center items-center ${darkMode ? 'bg-gray-900 text-gray-200' : 'bg-gray-100 text-gray-800'} overflow-hidden`}>
+    <div
+      className={`pt-2 min-h-screen flex flex-col justify-center items-center ${
+        darkMode ? "bg-gray-900 text-gray-200" : "bg-gray-100 text-gray-800"
+      } overflow-hidden`}
+    >
       <Nav darkMode={darkMode} />
       <motion.section
         id="home"
@@ -73,14 +87,14 @@ const HomePage = () => {
           <motion.h1
             className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-4"
             variants={itemVariants}
-            style={{ color: darkMode ? '#FFD700' : '#DAA520' }}
+            style={{ color: darkMode ? "#FFD700" : "#DAA520" }}
           >
             Welcome to My Portfolio
           </motion.h1>
           <motion.p
             className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl mb-8 text-center md:text-left px-2"
             variants={itemVariants}
-            style={{ color: darkMode ? '#ADD8E6' : '#5F9EA0' }}
+            style={{ color: darkMode ? "#ADD8E6" : "#5F9EA0" }}
           >
             {joke}
           </motion.p>
@@ -95,7 +109,11 @@ const HomePage = () => {
           </motion.a>
         </motion.div>
       </motion.section>
-      <div className={`background-effect ${darkMode ? 'bg-gray-800' : 'bg-gray-200'}`}></div>
+      <div
+        className={`background-effect ${
+          darkMode ? "bg-gray-800" : "bg-gray-200"
+        }`}
+      ></div>
     </div>
   );
 };
