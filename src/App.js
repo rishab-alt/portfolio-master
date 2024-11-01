@@ -11,6 +11,7 @@ import Unit12 from './components/UnitPages/unit12'
 import Unit14 from './components/UnitPages/unit14'
 import Unit3 from './components/UnitPages/unit3'
 import Timeline from './components/pages/TimeLine'
+import NotFound from './components/pages/NotFound'
 
 const App = () => {
   return (
@@ -28,6 +29,7 @@ const App = () => {
         <Route path="/unit12" element={<Unit12 />} />
         <Route path="/unit14" element={<Unit14 />} />
         <Route path="/timeline" element={<Timeline />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </Router>
   );
