@@ -29,13 +29,43 @@ const Navbar = () => {
           <div className="md:hidden">
             <motion.button
               onClick={toggleMenu}
-              className="text-white focus:outline-none"
+              className="text-yellow-500 focus:outline-none"
               whileHover={{ scale: 1.2 }}
               whileTap={{ scale: 0.9 }}
             >
-              <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16m-7 6h7"></path>
-              </svg>
+              {isOpen ? (
+                // 'X' icon when menu is open
+                <svg
+                  className="w-8 h-8"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="M6 18L18 6M6 6l12 12"
+                  ></path>
+                </svg>
+              ) : (
+                // Hamburger icon when menu is closed
+                <svg
+                  className="w-8 h-8"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="M4 6h16M4 12h16m-7 6h7"
+                  ></path>
+                </svg>
+              )}
             </motion.button>
           </div>
           {/* Desktop Navigation Menu */}
