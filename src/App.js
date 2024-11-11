@@ -15,7 +15,6 @@ import NotFound from './components/pages/NotFound'
 
 const App = () => {
   return (
-    
     <Router>
       <Routes>
         <Route path="/" element={<HomePage />} />
