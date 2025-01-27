@@ -100,7 +100,7 @@ const HomePage = () => {
           </motion.p>
           <motion.a
             href="/projects"
-            className="cta-btn bg-indigo-600 text-white py-2 px-6 sm:py-3 sm:px-8 lg:py-4 lg:px-12 xl:py-5 xl:px-16 rounded-full font-semibold hover:bg-indigo-500 transition duration-300"
+            className="bg-yellow-500 hover:bg-yellow-400 text-black py-2 px-6 sm:py-3 sm:px-8 lg:py-4 lg:px-12 xl:py-5 xl:px-16 rounded-full font-semibold "
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
             variants={itemVariants}
